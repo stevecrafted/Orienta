@@ -51,6 +51,8 @@ The solution is composed of several core features:
 4. Job search through **Google Custom Search API**  
 5. Retrieval of matching job listings  
 
+
+```mermaid
 graph LR
     %% Définition des styles
     classDef userNode fill:#0073b1,stroke:#fff,color:#fff,stroke-width:2px;
@@ -79,6 +81,7 @@ graph LR
     
     %% Style général du diagramme
     linkStyle default stroke:#0073b1,stroke-width:2px,fill:none;
+```mermaid
 
 ### Training Search
 1. CV import  
@@ -86,6 +89,7 @@ graph LR
 3. Generation of Google queries to find training programs matching missing skills  
 4. Search via **Google Custom Search API**  
 
+```mermaid
 graph TD
     %% Définition des styles
     classDef userNode fill:#0073b1,stroke:#fff,color:#fff,stroke-width:2px;
@@ -136,6 +140,7 @@ graph TD
     linkStyle 8,9 stroke:#1b5e20,stroke-width:2px;
     linkStyle 10,11 stroke:#0073b1,stroke-width:2px;
     linkStyle 12 stroke:#0073b1,stroke-width:2px;
+```mermaid
 
 ### Candidate List
 - Profiles are retrieved from the CV model stored in the database.
