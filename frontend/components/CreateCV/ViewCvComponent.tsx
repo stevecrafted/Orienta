@@ -120,7 +120,7 @@ export default function ViewCvComponent({ cvId, isReadOnly = true }: ViewCvCompo
 
       const imgData = canvas.toDataURL("image/png")
       const pdf = new jsPDF({
-        Hiriontion: "portrait",
+        Orientation: "portrait",
         unit: "mm",
         format: "a4",
       })
@@ -213,8 +213,8 @@ export default function ViewCvComponent({ cvId, isReadOnly = true }: ViewCvCompo
               const contenu = typeof cvData?.contenuJson === 'string' ? JSON.parse(cvData.contenuJson) : cvData?.contenuJson
               const email = contenu?.header?.email
               if (email) {
-                const subject = encodeURIComponent(`Opportunity from Hirion - ${cvData?.nom || ''}`)
-                const body = encodeURIComponent(`Hello ${contenu?.header?.name || ''},\n\nI saw your profile on Hirion and would like to discuss a potential opportunity with you.\n\nRegards, `)
+                const subject = encodeURIComponent(`Opportunity from Orienta - ${cvData?.nom || ''}`)
+                const body = encodeURIComponent(`Hello ${contenu?.header?.name || ''},\n\nI saw your profile on Orienta and would like to discuss a potential opportunity with you.\n\nRegards, `)
                 return (
                   <a
                     href={`mailto:${email}?subject=${subject}&body=${body}`}

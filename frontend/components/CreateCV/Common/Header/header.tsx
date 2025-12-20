@@ -11,7 +11,7 @@ export default function Header() {
       <div className="container mx-auto px-4 py-2 flex items-center justify-between">
         <div className="flex items-center space-x-4">
           <Link href="/" className="text-teal-500">
-            <Image src={Logo} alt="Hirion Logo" />
+            <Image src={Logo} alt="Orienta Logo" />
           </Link>
 
           <Button variant="ghost">Documents</Button>

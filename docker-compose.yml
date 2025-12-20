@@ -3,7 +3,7 @@ services:
     image: postgres:15
     restart: unless-stopped
     environment:
-      POSTGRES_DB: Hirion
+      POSTGRES_DB: Orienta
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: steve
     volumes:
@@ -19,7 +19,7 @@ services:
     depends_on:
       - db
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/Hirion
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/Orienta
       SPRING_DATASOURCE_USERNAME: postgres
       SPRING_DATASOURCE_PASSWORD: steve
       SERVER_PORT: 8080
@@ -42,4 +42,4 @@ volumes:
 
 networks:
   default:
-    name: Hirion_network
+    name: Orienta_network

@@ -382,7 +382,7 @@ function ContactModal({ open, onClose, loading, error, contact }: { open: boolea
             <div style={{ marginBottom: 8 }}><strong>{t('contactEmail')}:</strong> {contact.email || t('noContactEmail')}</div>
             <div style={{ marginBottom: 12 }}><strong>{t('contactPhone')}:</strong> {contact.phone || '-'}</div>
             {contact.email && (
-              <a href={`mailto:${contact.email}?subject=${encodeURIComponent('Opportunity from Hirion')}`} className="btn-primary">{t('openMail')}</a>
+              <a href={`mailto:${contact.email}?subject=${encodeURIComponent('Opportunity from Orienta')}`} className="btn-primary">{t('openMail')}</a>
             )}
           </div>
         ) : (

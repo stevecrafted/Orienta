@@ -1,7 +1,7 @@
-# HIRION
+# Orienta
 
 ## Project Overview
-HIRION is a platform designed to **facilitate job and training search** for people seeking new professional opportunities.  
+Orienta is a platform designed to **facilitate job and training search** for people seeking new professional opportunities.  
 The platform also enables structured management and sharing of candidate profiles, optimized for recruiters.
 
 The solution is composed of several core features:  
