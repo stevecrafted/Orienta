@@ -53,34 +53,36 @@ The solution is composed of several core features:
 
 
 ```mermaid
-graph LR
-    %% Définition des styles
+graph LR 
+    %% Define styles with dark theme
     classDef userNode fill:#0073b1,stroke:#fff,color:#fff,stroke-width:2px;
-    classDef serverNode fill:#f5f5f5,stroke:#333,stroke-width:1.5px;
-    classDef iaNode fill:#e8f4f8,stroke:#0073b1,stroke-width:1.5px;
-    classDef apiNode fill:#f0f0f0,stroke:#34a853,stroke-width:1.5px;
-    classDef resultNode fill:#fff,stroke:#0073b1,stroke-width:2px;
+    classDef serverNode fill:#555555,stroke:#fff,color:#fff,stroke-width:1.5px;
+    classDef iaNode fill:#37474F,stroke:#fff,color:#fff,stroke-width:1.5px;
+    classDef apiNode fill:#2E7D32,stroke:#fff,color:#fff,stroke-width:1.5px;
+    classDef resultNode fill:#424242,stroke:#fff,color:#fff,stroke-width:2px;
     
-    %% Éléments du workflow
-    A[👤 Utilisateur] -->|Import/Drag & Drop du CV| B[🌐 Frontend];
-    B -->|Envoi du CV| C[⚙️ Backend];
-    C -->|Analyse| D[🤖 Modèle d'IA];
-    D -->|1. Extraction: compétences, expériences, métier cible| D;
-    D -->|2. Génération requête optimisée| C;
-    C -->|Requête de recherche| E[🔗 API Externe<br/>Google Custom Search];
-    E -->|Résultats JSON/XML| C;
-    C -->|Offres d'emploi pertinentes| B;
-    B -->|📄 Affichage des résultats| F[📋 Liste d'offres];
+    %% Workflow elements
+    A[👤 User] -->|Import/Drag & Drop CV| B[🌐 Frontend];
+    B -->|Send CV| C[⚙️ Backend];
+    C -->|Analyze| D[🤖 AI Model];
+    D -->|1. Extract: skills, experience, target job| D;
+    D -->|2. Generate optimized query| C;
+    C -->|Search query| E[🔗 External API<br/>Google Custom Search];
+    E -->|JSON/XML Results| C;
+    C -->|Relevant job offers| B;
+    B -->|📄 Display results| F[📋 Job Listings];
     
-    %% Application des styles
+    %% Apply styles
     class A userNode;
     class B,C serverNode;
     class D iaNode;
     class E apiNode;
     class F resultNode;
     
-    %% Style général du diagramme
-    linkStyle default stroke:#0073b1,stroke-width:2px,fill:none; 
+    %% Global diagram style
+    style graph fill:#2D2D2D,stroke:#fff;
+    style node color:#fff;
+    linkStyle default stroke:#64B5F6,stroke-width:2px;
 ```
 
 ### Training Search
@@ -90,41 +92,41 @@ graph LR
 4. Search via **Google Custom Search API**  
 
 ```mermaid
-graph TD
-    %% Définition des styles
+graph TD 
+    %% Define styles with lighter grays but white text
     classDef userNode fill:#0073b1,stroke:#fff,color:#fff,stroke-width:2px;
-    classDef frontendNode fill:#eef3f8,stroke:#0073b1,stroke-width:1.5px;
-    classDef backendNode fill:#f8f9fa,stroke:#333,stroke-width:1.5px;
-    classDef iaNode fill:#e8f4f8,stroke:#0073b1,stroke-width:1.5px;
-    classDef apiNode fill:#f0f7ff,stroke:#1b5e20,stroke-width:1.5px;
-    classDef resultNode fill:#fff,stroke:#0073b1,stroke-width:2px;
+    classDef frontendNode fill:#555555,stroke:#fff,color:#fff,stroke-width:1.5px;
+    classDef backendNode fill:#666666,stroke:#fff,color:#fff,stroke-width:1.5px;
+    classDef iaNode fill:#444444,stroke:#fff,color:#fff,stroke-width:1.5px;
+    classDef apiNode fill:#4A4A4A,stroke:#fff,color:#fff,stroke-width:1.5px;
+    classDef resultNode fill:#333333,stroke:#fff,color:#fff,stroke-width:2px;
     
-    %% Workflow principal
-    A[👤 Utilisateur] -->|1. Import du CV| B[📱 Frontend];
+    %% Main workflow
+    A[👤 User] -->|1. Import CV| B[📱 Frontend];
     
-    subgraph "Interface Utilisateur"
-        B -->|2. Envoi du CV + Poste cible| C[⚙️ Backend];
+    subgraph "User Interface"
+        B -->|2. Send CV + Target Job| C[⚙️ Backend];
     end
     
-    subgraph "Analyse et Comparaison"
-        C -->|3. Analyse du CV| D[🤖 IA: Analyseur];
-        D -->|4. Extraction compétences| D;
-        D -->|5. Identification métier cible| E[🎯 Comparateur];
-        E -->|6. Compétences requises vs actuelles| E;
-        E -->|7. Détection écarts| F[📊 Générateur de requêtes];
+    subgraph "Analysis & Comparison"
+        C -->|3. CV Analysis| D[🤖 AI: Analyzer];
+        D -->|4. Skill Extraction| D;
+        D -->|5. Target Job Identification| E[🎯 Comparator];
+        E -->|6. Required vs Current Skills| E;
+        E -->|7. Gap Detection| F[📊 Query Generator];
     end
     
-    subgraph "Recherche de Formations"
-        F -->|8. Requêtes par compétence| G[🔍 API Formations<br/>Google Custom Search];
-        G -->|9. Résultats bruts| H[📦 Agrégateur];
-        H -->|10. Filtrage et classement| H;
+    subgraph "Training Search"
+        F -->|8. Queries per Skill| G[🔍 Training API<br/>Google Custom Search];
+        G -->|9. Raw Results| H[📦 Aggregator];
+        H -->|10. Filtering & Ranking| H;
     end
     
-    H -->|11. Formations recommandées| C;
-    C -->|12. Affichage des résultats| I[📚 Formations personnalisées];
+    H -->|11. Recommended Trainings| C;
+    C -->|12. Display Results| I[📚 Personalized Trainings];
     I -->|13. Consultation| A;
     
-    %% Application des styles
+    %% Apply styles
     class A userNode;
     class B frontendNode;
     class C,H backendNode;
@@ -132,14 +134,17 @@ graph TD
     class G apiNode;
     class I resultNode;
     
-    %% Style des flèches
-    linkStyle 0 stroke:#0073b1,stroke-width:2px;
-    linkStyle 1 stroke:#0073b1,stroke-width:2px;
-    linkStyle 2,3,4,5,6 stroke:#0073b1,stroke-width:2px;
-    linkStyle 7 stroke:#1b5e20,stroke-width:2px;
-    linkStyle 8,9 stroke:#1b5e20,stroke-width:2px;
-    linkStyle 10,11 stroke:#0073b1,stroke-width:2px;
-    linkStyle 12 stroke:#0073b1,stroke-width:2px; 
+    %% Global style for background
+    style TD fill:#2D2D2D,color:#fff;
+    
+    %% Arrow styles
+    linkStyle 0 stroke:#64B5F6,stroke-width:2px;
+    linkStyle 1 stroke:#64B5F6,stroke-width:2px;
+    linkStyle 2,3,4,5,6 stroke:#64B5F6,stroke-width:2px;
+    linkStyle 7 stroke:#81C784,stroke-width:2px;
+    linkStyle 8,9 stroke:#81C784,stroke-width:2px;
+    linkStyle 10,11 stroke:#64B5F6,stroke-width:2px;
+    linkStyle 12 stroke:#64B5F6,stroke-width:2px;
 ```
 
 ### Candidate List
