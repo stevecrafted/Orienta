@@ -1,0 +1,299 @@
+/* ==================== KEEPER STYLE - FORMATIONS POSTE PAGE ==================== */
+
+.ma-main-container { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 40px 20px; 
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.ma-page2-grid { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 30px; 
+}
+
+/* Left Panel - Formations */
+.ma-page2-left-panel { 
+    background: white;
+    padding: 40px; 
+    border-radius: var(--radius-lg, 20px);
+    box-shadow: var(--shadow, 0 5px 15px rgba(0,0,0,0.1));
+    border: 1px solid var(--light-gray, #e9ecef);
+}
+
+/* Right Panel - Job Details */
+.ma-page2-right-panel { 
+    background: linear-gradient(135deg, var(--primary, #1a5fb4) 0%, var(--primary-dark, #0d4a8a) 100%);
+    padding: 40px; 
+    border-radius: var(--radius-lg, 20px);
+    color: white;
+    box-shadow: var(--shadow, 0 5px 15px rgba(0,0,0,0.1));
+}
+
+.ma-page2-section-title { 
+    font-size: 1.5rem; 
+    margin-bottom: 25px; 
+    font-weight: 700;
+    color: var(--dark, #2c3e50);
+}
+
+.ma-page2-right-panel .ma-page2-section-title {
+    color: white;
+}
+
+/* Formation Card */
+.ma-page2-formation-card { 
+    background: var(--light, #f8f9fa);
+    border-radius: var(--radius-md, 12px);
+    padding: 20px; 
+    margin-bottom: 15px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+    transition: var(--transition, all 0.3s ease);
+    border: 1px solid var(--light-gray, #e9ecef);
+}
+
+.ma-page2-formation-card:hover {
+    background: white;
+    box-shadow: var(--shadow, 0 5px 15px rgba(0,0,0,0.1));
+    transform: translateX(5px);
+}
+
+.ma-page2-formation-left { 
+    display: flex; 
+    gap: 15px; 
+    align-items: center;
+    flex: 1;
+}
+
+.ma-page2-formation-logo { 
+    width: 50px; 
+    height: 50px; 
+    background: var(--secondary, #26a269);
+    border-radius: var(--radius-md, 12px);
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    color: white; 
+    font-weight: bold;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.ma-page2-formation-info {
+    flex: 1;
+}
+
+.ma-page2-formation-info h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--dark, #2c3e50);
+    margin-bottom: 5px;
+}
+
+.ma-page2-formation-info p {
+    font-size: 0.9rem;
+    color: var(--gray, #6c757d);
+    margin: 0;
+}
+
+.ma-page2-formation-actions { 
+    display: flex; 
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.ma-page2-btn-open { 
+    background: white;
+    border: 2px solid var(--primary, #1a5fb4);
+    color: var(--primary, #1a5fb4);
+    padding: 8px 20px; 
+    border-radius: var(--radius-full, 50px);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition, all 0.3s ease);
+    font-size: 0.9rem;
+}
+
+.ma-page2-btn-open:hover {
+    background: var(--primary, #1a5fb4);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.ma-page2-btn-save { 
+    background: var(--secondary, #26a269);
+    color: white; 
+    border: none; 
+    padding: 8px 20px; 
+    border-radius: var(--radius-full, 50px);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition, all 0.3s ease);
+    font-size: 0.9rem;
+}
+
+.ma-page2-btn-save:hover {
+    background: #1f8a57;
+    transform: translateY(-2px);
+}
+
+.ma-page2-btn-register {
+    background: white;
+    color: var(--primary, #1a5fb4);
+    border: none;
+    padding: 12px 28px;
+    border-radius: var(--radius-full, 50px);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition, all 0.3s ease);
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+.ma-page2-btn-register:hover {
+    background: var(--light-gray, #e9ecef);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow, 0 5px 15px rgba(0,0,0,0.1));
+}
+
+/* Job Details in Right Panel */
+.ma-page2-job-title { 
+    font-size: 2rem; 
+    font-weight: 700; 
+    margin-bottom: 15px;
+    color: white;
+}
+
+.ma-page2-job-company {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    opacity: 0.95;
+}
+
+.ma-page2-badge { 
+    padding: 6px 16px; 
+    border-radius: var(--radius-full, 50px);
+    font-size: 0.85rem; 
+    font-weight: 600; 
+    background: rgba(255,255,255,0.2);
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.ma-page2-salary { 
+    font-size: 1.1rem; 
+    opacity: 0.95;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.ma-page2-description {
+    margin-top: 20px;
+    line-height: 1.7;
+    opacity: 0.95;
+}
+
+.ma-page2-description h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.ma-page2-description ul {
+    list-style: none;
+    padding: 0;
+}
+
+.ma-page2-description li {
+    padding: 5px 0;
+    padding-left: 25px;
+    position: relative;
+}
+
+.ma-page2-description li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* Empty state for formations */
+.ma-empty-formations {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--gray, #6c757d);
+}
+
+.ma-empty-formations p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 968px) { 
+    .ma-page2-grid { 
+        grid-template-columns: 1fr; 
+        gap: 20px;
+    }
+    
+    .ma-page2-left-panel,
+    .ma-page2-right-panel {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .ma-main-container {
+        padding: 30px 15px;
+    }
+    
+    .ma-page2-left-panel,
+    .ma-page2-right-panel {
+        padding: 25px 20px;
+    }
+    
+    .ma-page2-formation-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .ma-page2-formation-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .ma-page2-btn-open,
+    .ma-page2-btn-save {
+        flex: 1;
+    }
+    
+    .ma-page2-job-title {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .ma-page2-section-title {
+        font-size: 1.3rem;
+    }
+    
+    .ma-page2-job-title {
+        font-size: 1.4rem;
+    }
+    
+    .ma-page2-formation-card {
+        padding: 15px;
+    }
+    
+    .ma-page2-formation-logo {
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+    }
+}
