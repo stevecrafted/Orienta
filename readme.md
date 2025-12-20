@@ -53,24 +53,24 @@ The solution is composed of several core features:
 
 
 ```mermaid
-graph LR 
-    %% Define styles with dark theme
+graph LR
+    %% Define styles
     classDef userNode fill:#0073b1,stroke:#fff,color:#fff,stroke-width:2px;
-    classDef serverNode fill:#555555,stroke:#fff,color:#fff,stroke-width:1.5px;
-    classDef iaNode fill:#37474F,stroke:#fff,color:#fff,stroke-width:1.5px;
-    classDef apiNode fill:#2E7D32,stroke:#fff,color:#fff,stroke-width:1.5px;
-    classDef resultNode fill:#424242,stroke:#fff,color:#fff,stroke-width:2px;
+    classDef serverNode fill:#f5f5f5,stroke:#333,stroke-width:1.5px;
+    classDef iaNode fill:#e8f4f8,stroke:#0073b1,stroke-width:1.5px;
+    classDef apiNode fill:#f0f0f0,stroke:#34a853,stroke-width:1.5px;
+    classDef resultNode fill:#fff,stroke:#0073b1,stroke-width:2px;
     
     %% Workflow elements
     A[👤 User] -->|Import/Drag & Drop CV| B[🌐 Frontend];
     B -->|Send CV| C[⚙️ Backend];
     C -->|Analyze| D[🤖 AI Model];
-    D -->|1. Extract: skills, experience, target job| D;
-    D -->|2. Generate optimized query| C;
-    C -->|Search query| E[🔗 External API<br/>Google Custom Search];
+    D -->|1. Extract: experiences, target job| D;
+    D -->|2. Optimized Google query| C;
+    C -->|Search query| E[🔗 API<br/>Google Custom Search];
     E -->|JSON/XML Results| C;
-    C -->|Relevant job offers| B;
-    B -->|📄 Display results| F[📋 Job Listings];
+    C -->|Job offers| B;
+    B -->|📄 Display results| F[📋 Results];
     
     %% Apply styles
     class A userNode;
@@ -79,10 +79,8 @@ graph LR
     class E apiNode;
     class F resultNode;
     
-    %% Global diagram style
-    style graph fill:#2D2D2D,stroke:#fff;
-    style node color:#fff;
-    linkStyle default stroke:#64B5F6,stroke-width:2px;
+    %% Diagram style
+    linkStyle default stroke:#0073b1,stroke-width:2px;
 ```
 
 ### Training Search
