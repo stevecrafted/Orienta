@@ -80,8 +80,8 @@ graph LR
     class F resultNode;
     
     %% Style général du diagramme
-    linkStyle default stroke:#0073b1,stroke-width:2px,fill:none;
-```mermaid
+    linkStyle default stroke:#0073b1,stroke-width:2px,fill:none; 
+```
 
 ### Training Search
 1. CV import  
@@ -139,8 +139,8 @@ graph TD
     linkStyle 7 stroke:#1b5e20,stroke-width:2px;
     linkStyle 8,9 stroke:#1b5e20,stroke-width:2px;
     linkStyle 10,11 stroke:#0073b1,stroke-width:2px;
-    linkStyle 12 stroke:#0073b1,stroke-width:2px;
-```mermaid
+    linkStyle 12 stroke:#0073b1,stroke-width:2px; 
+```
 
 ### Candidate List
 - Profiles are retrieved from the CV model stored in the database.
