@@ -1,50 +1,50 @@
 import { Metadata } from "next";
 
 export const baseMetadata: Metadata = {
-    metadataBase: new URL("https://Orienta.omsharma.xyz"),
+    metadataBase: new URL("https://Hirion.omsharma.xyz"),
     title: {
-        default: "Orienta | Resume Builder Prototype",
-        template: "%s | Orienta",
+        default: "Hirion | Resume Builder Prototype",
+        template: "%s | Hirion",
     },
     description:
-        "Orienta is a customizable, modern resume builder that helps users craft professional resumes with ease. Currently in prototype phase.",
+        "Hirion is a customizable, modern resume builder that helps users craft professional resumes with ease. Currently in prototype phase.",
     keywords: [
         "resume builder",
         "cv generator",
-        "Orienta",
+        "Hirion",
         "modern resume template",
         "customizable cv",
         "nextjs resume app",
     ],
     authors: [{ name: "Om Sharma" }],
     creator: "Om Sharma",
-    publisher: "Orienta",
+    publisher: "Hirion",
 
     openGraph: {
         type: "website",
         locale: "en_US",
-        url: "https://Orienta.omsharma.xyz",
-        title: "Orienta — Build Better Resumes, Effortlessly",
+        url: "https://Hirion.omsharma.xyz",
+        title: "Hirion — Build Better Resumes, Effortlessly",
         description:
-            "Create beautiful, customizable resumes with Orienta. Currently under development as a prototype.",
-        siteName: "Orienta",
+            "Create beautiful, customizable resumes with Hirion. Currently under development as a prototype.",
+        siteName: "Hirion",
         images: [
             {
-                url: "/brand/Orienta-preview.png",
+                url: "/brand/Hirion-preview.png",
                 width: 1280,
                 height: 720,
-                alt: "Orienta - Resume Builder UI Preview",
+                alt: "Hirion - Resume Builder UI Preview",
             },
         ],
     },
 
     twitter: {
         card: "summary_large_image",
-        title: "Orienta — Build Better Resumes, Effortlessly",
+        title: "Hirion — Build Better Resumes, Effortlessly",
         description:
-            "Create beautiful, customizable resumes with Orienta. Currently under development as a prototype.",
+            "Create beautiful, customizable resumes with Hirion. Currently under development as a prototype.",
         creator: "@1omsharma",
-        images: ["/brand/Orienta-preview.png"],
+        images: ["/brand/Hirion-preview.png"],
     },
 
     robots: {
@@ -65,7 +65,7 @@ export const baseMetadata: Metadata = {
     },
 
     alternates: {
-        canonical: "https://Orienta.omsharma.xyz",
+        canonical: "https://Hirion.omsharma.xyz",
     },
 
     icons: {
@@ -86,8 +86,8 @@ export const baseMetadata: Metadata = {
 export const jsonLdSchema = {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    name: "Orienta",
-    url: "https://Orienta.omsharma.xyz",
+    name: "Hirion",
+    url: "https://Hirion.omsharma.xyz",
     description:
         "Customizable and modern resume builder built with React and Redux Toolkit. Currently a prototype project.",
     applicationCategory: "Productivity",

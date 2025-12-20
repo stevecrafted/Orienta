@@ -1,11 +1,11 @@
 \c postgres;
 
 -- DROP and CREATE fresh database (ATTENTION: destructive)
-DROP DATABASE IF EXISTS Orienta;
-CREATE DATABASE Orienta;
+DROP DATABASE IF EXISTS Hirion;
+CREATE DATABASE Hirion;
 
 -- Connect to new DB
-\c Orienta;
+\c Hirion;
 
 -- =============================
 -- Schema (with updated sizes)

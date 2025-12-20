@@ -5,7 +5,7 @@ import { notFound } from 'next/navigation';
 import { locales } from '@/i18n'; 
 
 export const metadata: Metadata = {
-  title: "Orienta",
+  title: "Hirion",
   description: "Améliorez votre CV avec l'IA",
 };
 

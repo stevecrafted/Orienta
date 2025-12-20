@@ -120,7 +120,7 @@ export default function ViewCvComponent({ cvId, isReadOnly = true }: ViewCvCompo
 
       const imgData = canvas.toDataURL("image/png")
       const pdf = new jsPDF({
-        orientation: "portrait",
+        Hiriontion: "portrait",
         unit: "mm",
         format: "a4",
       })

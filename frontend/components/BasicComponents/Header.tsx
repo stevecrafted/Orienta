@@ -47,7 +47,7 @@ export default function Header() {
             <header className="mitady-asa-header">
                 <div className="mitady-asa-logo">
                     <Link href="/">
-                        <span className="logo-text">Orienta</span>
+                        <span className="logo-text">Hirion</span>
                     </Link>
                 </div>
 
