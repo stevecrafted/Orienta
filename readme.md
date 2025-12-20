@@ -179,18 +179,16 @@ google.gemini.api.key=YOUR_GEMINI_API_KEY
 google.api.key=YOUR_GOOGLE_API_KEY
 google.search.engine.id=YOUR_SEARCH_ENGINE_ID
 
-#### Using Docker
-```bash
+#### If using Docker 
 docker compose up -d
-Backend
-bash
-Copier le code
+
+#### Else 
+Backend 
 cd backend
 mvn install
 mvn spring-boot:run
-CV Frontend
-bash
-Copier le code
+
+Frontend 
 cd cv-frontend
 npm install
 npm run dev
