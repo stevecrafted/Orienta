@@ -11,9 +11,9 @@ export default function RegisterPage() {
   const t = useTranslations('auth.register')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const [nom, setNom] = useState('')
-  const [prenom, setPrenom] = useState('')
-  const [telephone, setTelephone] = useState('')
+  const [lastName, setLastName] = useState('')
+  const [firstName, setFirstName] = useState('')
+  const [phone, setPhone] = useState('')
   const [error, setError] = useState<string | null>(null)
   const [loading, setLoading] = useState(false)
   const router = useRouter()
@@ -22,10 +22,16 @@ export default function RegisterPage() {
     e.preventDefault()
     setError(null)
     setLoading(true)
-    const res = await authService.register({ email, password, nom, prenom, telephone })
+    const res = await authService.register({ 
+      email, 
+      password, 
+      nom: lastName, 
+      prenom: firstName, 
+      telephone: phone 
+    })
     setLoading(false)
     if (res.error || !res.data) {
-      setError(res.error || 'Erreur de création de compte')
+      setError(res.error || 'Account creation error')
       return
     }
     try {
@@ -38,21 +44,118 @@ export default function RegisterPage() {
   return (
     <div>
       <Header />
-      <main className="ma-main-container" style={{ maxWidth: 520, margin: '0 auto' }}>
-        <h1>{t('title')}</h1>
-        <form onSubmit={onSubmit}>
-          <div className="field"><label>{t('name')}</label><input value={nom} onChange={e=>setNom(e.target.value)} required /></div>
-          <div className="field"><label>{t('name')}</label><input value={prenom} onChange={e=>setPrenom(e.target.value)} required /></div>
-          <div className="field"><label>{t('email')}</label><input type="email" value={email} onChange={e=>setEmail(e.target.value)} required /></div>
-          <div className="field"><label>Téléphone</label><input value={telephone} onChange={e=>setTelephone(e.target.value)} /></div>
-          <div className="field"><label>{t('password')}</label><input type="password" value={password} onChange={e=>setPassword(e.target.value)} required /></div>
-          {error && <div style={{ color: 'red', marginTop: 8 }}>{error}</div>}
-          <div style={{ marginTop: 16 }}>
-            <button type="submit" className="ma-page2-btn-register" disabled={loading}>
-              {loading ? t('submitting') : t('submit')}
-            </button>
+      <main className="ma-auth-box" style={{ maxWidth: 900, margin: '40px auto', minHeight: 720 }}>
+        <div className="ma-auth-content">
+          <div className="ma-auth-brand">
+            <div className="ma-auth-logo">
+              <span className="ma-auth-logo-icon">🌟</span>
+            </div>
+            <p className="ma-auth-brand-name">Orienta</p>
           </div>
-        </form>
+          
+          <div className="ma-auth-content-main">
+            <h1 className="ma-auth-title">
+              Join Our Community
+            </h1>
+            
+            <p className="ma-auth-subtitle">
+              Create your account to manage your applications, track your training 
+              and receive personalized recommendations.
+            </p>
+            
+            <ul className="ma-auth-features">
+              <li className="ma-auth-feature-item">
+                <div className="ma-auth-feature-check">✓</div>
+                <span>Complete profile management</span>
+              </li>
+              <li className="ma-auth-feature-item">
+                <div className="ma-auth-feature-check">✓</div>
+                <span>Personalized recommendations</span>
+              </li>
+              <li className="ma-auth-feature-item">
+                <div className="ma-auth-feature-check">✓</div>
+                <span>Access to all features</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div className="ma-auth-indicators">
+            <div className="ma-auth-indicator ma-auth-indicator-active"></div>
+            <div className="ma-auth-indicator ma-auth-indicator-inactive"></div>
+            <div className="ma-auth-indicator ma-auth-indicator-inactive"></div>
+          </div>
+        </div>
+        
+        <div className="ma-auth-form-section">
+          <div className="ma-auth-form-header">
+            <h3>{t('title')}</h3>
+            <p>Enter your information</p>
+          </div>
+          <form onSubmit={onSubmit} style={{width:'100%'}}>
+            <div style={{marginBottom:18}}>
+              <label style={{display:'block', marginBottom:6}}>{t('lastName')}</label>
+              <div className="ma-auth-input-container">
+                <input 
+                  className="ma-auth-input"
+                  value={lastName} 
+                  onChange={e=>setLastName(e.target.value)} 
+                  required 
+                />
+              </div>
+            </div>
+            <div style={{marginBottom:18}}>
+              <label style={{display:'block', marginBottom:6}}>{t('firstName')}</label>
+              <div className="ma-auth-input-container">
+                <input 
+                  className="ma-auth-input"
+                  value={firstName} 
+                  onChange={e=>setFirstName(e.target.value)} 
+                  required 
+                />
+              </div>
+            </div>
+            <div style={{marginBottom:18}}>
+              <label style={{display:'block', marginBottom:6}}>{t('email')}</label>
+              <div className="ma-auth-input-container">
+                <input 
+                  type="email" 
+                  className="ma-auth-input"
+                  value={email} 
+                  onChange={e=>setEmail(e.target.value)} 
+                  required 
+                />
+              </div>
+            </div>
+            <div style={{marginBottom:18}}>
+              <label style={{display:'block', marginBottom:6}}>Phone</label>
+              <div className="ma-auth-input-container">
+                <input 
+                  className="ma-auth-input"
+                  value={phone} 
+                  onChange={e=>setPhone(e.target.value)} 
+                />
+              </div>
+            </div>
+            <div style={{marginBottom:18}}>
+              <label style={{display:'block', marginBottom:6}}>{t('password')}</label>
+              <div className="ma-auth-input-container">
+                <input 
+                  type="password" 
+                  className="ma-auth-input"
+                  value={password} 
+                  onChange={e=>setPassword(e.target.value)} 
+                  required 
+                />
+              </div>
+            </div>
+            {error && <div style={{ color: 'var(--error,#e74c3c)', marginTop: 8 }}>{error}</div>}
+            <div style={{marginTop:24}}>
+              <button type="submit" className="ma-auth-submit-btn" disabled={loading}>
+                {loading ? t('submitting') : t('submit')}
+              </button>
+            </div>
+          </form>
+        </div>
       </main>
     </div>
   )

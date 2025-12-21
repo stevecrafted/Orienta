@@ -61,7 +61,7 @@ export default function ResumeBuilder({
 
   const handleSaveToDatabase = async () => {
     if (!utilisateurId) {
-      setSaveMessage({ type: 'error', text: 'Utilisateur non connecté' })
+      setSaveMessage({ type: 'error', text: 'User not logged in' })
       setTimeout(() => setSaveMessage(null), 3000)
       return
     }
@@ -93,7 +93,7 @@ export default function ResumeBuilder({
       if (currentCvId) {
         // Mise à jour d'un CV existant
         response = await cvService.updateCvModele(currentCvId, cvData)
-        setSaveMessage({ type: 'success', text: 'CV mis à jour avec succès !' })
+        setSaveMessage({ type: 'success', text: 'CV updated successfully!' })
       } else {
         // Création d'un nouveau CV
         response = await cvService.createCvModele(cvData)
@@ -107,7 +107,7 @@ export default function ResumeBuilder({
           window.history.replaceState({}, '', url)
         }
         
-        setSaveMessage({ type: 'success', text: 'CV créé avec succès !' })
+        setSaveMessage({ type: 'success', text: 'CV created successfully!' })
       }
 
       setTimeout(() => setSaveMessage(null), 3000)
@@ -115,7 +115,7 @@ export default function ResumeBuilder({
       console.error('Erreur lors de la sauvegarde:', error)
       setSaveMessage({ 
         type: 'error', 
-        text: error.response?.data?.message || 'Erreur lors de la sauvegarde du CV' 
+        text: error.response?.data?.message || 'Error saving CV' 
       })
       setTimeout(() => setSaveMessage(null), 5000)
     } finally {
@@ -211,7 +211,7 @@ export default function ResumeBuilder({
         </div>
       )} */}
 
-      <div className="flex flex-col md:flex-row gap-3 md:gap-8">
+      <div className=" flex flex-col md:flex-row gap-3 md:gap-8 justify-center">
         <Sidebar resumeRef={resumeRef} />
 
         <div className="resume-editor-wrapper flex flex-row flex-wrap items-center justify-center relative z-[1] w-full md:w-[890px]">

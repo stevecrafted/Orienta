@@ -124,12 +124,12 @@ export default function PDFExportButton({ resumeRef }: PDFExportButtonProps) {
             {isExporting ? (
                 <>
                     <Loader2 size={18} className="mr-2 animate-spin" />
-                    Génération du PDF...
+                    Générate PDF...
                 </>
             ) : (
                 <>
                     <Download size={18} className="mr-2" />
-                    Exporter en PDF
+                    Export into PDF
                 </>
             )}
         </Button>

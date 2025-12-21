@@ -20,7 +20,7 @@ export default function HtmlLoader({ fullscreen = true }: { fullscreen?: boolean
   if (!html) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <div className="animate-spin h-8 w-8 border-4 border-blue-400 border-t-transparent rounded-full"></div>
+        <div className="animate-spin h-8 w-8 border-4 border-blue-400  rounded-full"></div>
       </div>
     )
   }

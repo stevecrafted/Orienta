@@ -1,7 +1,7 @@
 package com.example.backend.utils;
 
-import java.net.URI; 
-import java.util.ArrayList; 
+import java.net.URI;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -18,7 +18,8 @@ import java.text.Normalizer;
 public class IASearchUtils {
 
     /**
-     * Normalise les caractères spéciaux générés par l'IA (accents, guillemets, apostrophes, etc.)
+     * Normalise les caractères spéciaux générés par l'IA (accents, guillemets,
+     * apostrophes, etc.)
      * et les transforme en caractères ASCII standards
      * 
      * @param text Le texte à normaliser
@@ -30,106 +31,107 @@ public class IASearchUtils {
         }
 
         // Remplacer les guillemets typographiques par des guillemets standards
-        text = text.replace("\u201C", "\"")  // "
-                   .replace("\u201D", "\"")  // "
-                   .replace("\u00AB", "\"")  // «
-                   .replace("\u00BB", "\"")  // »
-                   .replace("\u2039", "'")   // ‹
-                   .replace("\u203A", "'");  // ›
+        text = text.replace("\u201C", "\"") // "
+                .replace("\u201D", "\"") // "
+                .replace("\u00AB", "\"") // «
+                .replace("\u00BB", "\"") // »
+                .replace("\u2039", "'") // ‹
+                .replace("\u203A", "'"); // ›
 
         // Remplacer les apostrophes typographiques
-        text = text.replace("\u2018", "'")   // '
-                   .replace("\u2019", "'")   // '
-                   .replace("`", "'")
-                   .replace("\u00B4", "'");  // ´
+        text = text.replace("\u2018", "'") // '
+                .replace("\u2019", "'") // '
+                .replace("`", "'")
+                .replace("\u00B4", "'"); // ´
 
         // Remplacer les tirets spéciaux
-        text = text.replace("\u2014", "-")  // em dash —
-                   .replace("\u2013", "-")  // en dash –
-                   .replace("\u2212", "-"); // minus sign −
+        text = text.replace("\u2014", "-") // em dash —
+                .replace("\u2013", "-") // en dash –
+                .replace("\u2212", "-"); // minus sign −
 
         // Remplacer les espaces insécables et autres espaces spéciaux
-        text = text.replace("\u00A0", " ")  // espace insécable
-                   .replace("\u2007", " ")  // espace de chiffre
-                   .replace("\u202F", " ")  // espace fine insécable
-                   .replace("\u2009", " ")  // espace fine
-                   .replace("\u200B", "")   // zero-width space (invisible)
-                   .replace("\u200C", "")   // zero-width non-joiner
-                   .replace("\u200D", "")   // zero-width joiner
-                   .replace("\uFEFF", "");  // zero-width no-break space (BOM)
+        text = text.replace("\u00A0", " ") // espace insécable
+                .replace("\u2007", " ") // espace de chiffre
+                .replace("\u202F", " ") // espace fine insécable
+                .replace("\u2009", " ") // espace fine
+                .replace("\u200B", "") // zero-width space (invisible)
+                .replace("\u200C", "") // zero-width non-joiner
+                .replace("\u200D", "") // zero-width joiner
+                .replace("\uFEFF", ""); // zero-width no-break space (BOM)
 
         // Normaliser les accents (décomposer puis recomposer)
         // NFD = Decomposition, NFC = Recomposition
-        // Ceci PRESERVE les accents français (é, à, ù, ç, etc.) mais normalise leur forme Unicode
+        // Ceci PRESERVE les accents français (é, à, ù, ç, etc.) mais normalise leur
+        // forme Unicode
         text = Normalizer.normalize(text, Normalizer.Form.NFC);
-        
+
         // Remplacer les points de suspension
-        text = text.replace("\u2026", "...");  // …
+        text = text.replace("\u2026", "..."); // …
 
         // Remplacer les symboles mathématiques courants
-        text = text.replace("\u00D7", "x")     // ×
-                   .replace("\u00F7", "/")     // ÷
-                   .replace("\u2264", "<=")    // ≤
-                   .replace("\u2265", ">=")    // ≥
-                   .replace("\u2260", "!=")    // ≠
-                   .replace("\u221E", "infinity") // ∞
-                   .replace("\u2248", "~=")    // ≈ (approximativement égal)
-                   .replace("\u00B1", "+/-");  // ±
+        text = text.replace("\u00D7", "x") // ×
+                .replace("\u00F7", "/") // ÷
+                .replace("\u2264", "<=") // ≤
+                .replace("\u2265", ">=") // ≥
+                .replace("\u2260", "!=") // ≠
+                .replace("\u221E", "infinity") // ∞
+                .replace("\u2248", "~=") // ≈ (approximativement égal)
+                .replace("\u00B1", "+/-"); // ±
 
         // Remplacer les symboles de monnaie qui pourraient causer des problèmes
-        text = text.replace("\u20AC", "EUR")   // €
-                   .replace("\u00A3", "GBP")   // £
-                   .replace("\u00A5", "JPY");  // ¥
+        text = text.replace("\u20AC", "EUR") // €
+                .replace("\u00A3", "GBP") // £
+                .replace("\u00A5", "JPY"); // ¥
 
         // Remplacer les fractions typographiques
-        text = text.replace("\u00BC", "1/4")   // ¼
-                   .replace("\u00BD", "1/2")   // ½
-                   .replace("\u00BE", "3/4")   // ¾
-                   .replace("\u2153", "1/3")   // ⅓
-                   .replace("\u2154", "2/3");  // ⅔
+        text = text.replace("\u00BC", "1/4") // ¼
+                .replace("\u00BD", "1/2") // ½
+                .replace("\u00BE", "3/4") // ¾
+                .replace("\u2153", "1/3") // ⅓
+                .replace("\u2154", "2/3"); // ⅔
 
         // Remplacer les puissances typographiques
-        text = text.replace("\u00B2", "^2")    // ²
-                   .replace("\u00B3", "^3")    // ³
-                   .replace("\u00B9", "^1");   // ¹
+        text = text.replace("\u00B2", "^2") // ²
+                .replace("\u00B3", "^3") // ³
+                .replace("\u00B9", "^1"); // ¹
 
         // Remplacer les bullets et puces spéciaux
-        text = text.replace("\u2022", "*")     // •
-                   .replace("\u2023", "*")     // ‣
-                   .replace("\u25E6", "*")     // ◦
-                   .replace("\u2043", "*")     // ⁃
-                   .replace("\u2219", "*");    // ∙
+        text = text.replace("\u2022", "*") // •
+                .replace("\u2023", "*") // ‣
+                .replace("\u25E6", "*") // ◦
+                .replace("\u2043", "*") // ⁃
+                .replace("\u2219", "*"); // ∙
 
         // Remplacer les symboles de copyright et marque
-        text = text.replace("\u00A9", "(c)")   // ©
-                   .replace("\u00AE", "(R)")   // ®
-                   .replace("\u2122", "(TM)"); // ™
+        text = text.replace("\u00A9", "(c)") // ©
+                .replace("\u00AE", "(R)") // ®
+                .replace("\u2122", "(TM)"); // ™
 
         // Remplacer les flèches qui pourraient apparaître
-        text = text.replace("\u2190", "<-")    // ←
-                   .replace("\u2192", "->")    // →
-                   .replace("\u2191", "^")     // ↑
-                   .replace("\u2193", "v")     // ↓
-                   .replace("\u21D2", "=>")    // ⇒
-                   .replace("\u21D0", "<=");   // ⇐
+        text = text.replace("\u2190", "<-") // ←
+                .replace("\u2192", "->") // →
+                .replace("\u2191", "^") // ↑
+                .replace("\u2193", "v") // ↓
+                .replace("\u21D2", "=>") // ⇒
+                .replace("\u21D0", "<="); // ⇐
 
         // Remplacer les symboles de check et croix
-        text = text.replace("\u2713", "v")     // ✓
-                   .replace("\u2714", "v")     // ✔
-                   .replace("\u2717", "x")     // ✗
-                   .replace("\u2718", "x");    // ✘
+        text = text.replace("\u2713", "v") // ✓
+                .replace("\u2714", "v") // ✔
+                .replace("\u2717", "x") // ✗
+                .replace("\u2718", "x"); // ✘
 
         // Remplacer les symboles de degré et pourcentage spéciaux
-        text = text.replace("\u00B0", "°")     // ° (garder le symbole degré standard)
-                   .replace("\u2030", "‰");    // ‰ (per mille - garder)
+        text = text.replace("\u00B0", "°") // ° (garder le symbole degré standard)
+                .replace("\u2030", "‰"); // ‰ (per mille - garder)
 
         // Remplacer les parenthèses et crochets spéciaux
-        text = text.replace("\u2768", "(")     // ❨
-                   .replace("\u2769", ")")     // ❩
-                   .replace("\u276A", "(")     // ❪
-                   .replace("\u276B", ")")     // ❫
-                   .replace("\u3008", "<")     // 〈
-                   .replace("\u3009", ">");    // 〉
+        text = text.replace("\u2768", "(") // ❨
+                .replace("\u2769", ")") // ❩
+                .replace("\u276A", "(") // ❪
+                .replace("\u276B", ")") // ❫
+                .replace("\u3008", "<") // 〈
+                .replace("\u3009", ">"); // 〉
 
         // Nettoyer les espaces multiples
         text = text.replaceAll("\\s+", " ").trim();
@@ -154,14 +156,14 @@ public class IASearchUtils {
         // Corrections spécifiques pour JSON
         // S'assurer que les booléens sont en minuscules
         jsonText = jsonText.replaceAll(":\\s*True\\b", ": true")
-                          .replaceAll(":\\s*False\\b", ": false")
-                          .replaceAll(":\\s*TRUE\\b", ": true")
-                          .replaceAll(":\\s*FALSE\\b", ": false");
+                .replaceAll(":\\s*False\\b", ": false")
+                .replaceAll(":\\s*TRUE\\b", ": true")
+                .replaceAll(":\\s*FALSE\\b", ": false");
 
         // S'assurer que null est en minuscules
         jsonText = jsonText.replaceAll(":\\s*Null\\b", ": null")
-                          .replaceAll(":\\s*NULL\\b", ": null")
-                          .replaceAll(":\\s*None\\b", ": null");
+                .replaceAll(":\\s*NULL\\b", ": null")
+                .replaceAll(":\\s*None\\b", ": null");
 
         return jsonText;
     }
@@ -247,12 +249,12 @@ public class IASearchUtils {
                     rec.setPlateforme(formation.plateforme);
                     rec.setCertificatType("N/A");
                     rec.setModalite("N/A");
-                    
+
                     // Add targeted skill(s) for this formation
                     List<String> targetedSkills = new ArrayList<>();
                     targetedSkills.add(skill);
                     rec.setTargetedSkills(targetedSkills);
-                    
+
                     recommendations.add(rec);
                 }
             }
@@ -350,7 +352,6 @@ public class IASearchUtils {
         return "Plateforme inconnue";
     }
 
-
     // Get domain from URL
     public static String getDomain(String url) {
         try {
@@ -360,7 +361,7 @@ public class IASearchUtils {
             return "";
         }
     }
- 
+
     public static class FormationDetail {
         String titre;
         String url;
@@ -379,22 +380,22 @@ public class IASearchUtils {
         Map<String, String> improvements = new HashMap<>();
 
         if (!missingSkills.isEmpty()) {
-            improvements.put("Compétences",
-                    "Ajoutez ces compétences manquantes : " + String.join(", ", missingSkills));
+            improvements.put("Skills",
+                    "Add the following missing skills: " + String.join(", ", missingSkills));
         }
 
         if (request.getExperiences() == null || request.getExperiences().isEmpty()) {
-            improvements.put("Expérience",
-                    "Détaillez davantage vos expériences professionnelles pertinentes");
+            improvements.put("Experience",
+                    "Provide more details about your relevant professional experiences");
         }
 
         if (request.getEducations() == null || request.getEducations().isEmpty()) {
-            improvements.put("Formation",
-                    "Incluez vos formations académiques et certifications");
+            improvements.put("Education",
+                    "Include your academic background and certifications");
         }
 
-        improvements.put("Format",
-                "Utilisez des mots-clés du poste dans votre CV pour passer les ATS (Applicant Tracking Systems)");
+        improvements.put("Formatting",
+                "Use job-specific keywords in your CV to pass Applicant Tracking Systems (ATS)");
 
         return improvements;
     }
@@ -402,11 +403,13 @@ public class IASearchUtils {
     /**
      * Version localisée de generateImprovements utilisant MessageSource et Locale.
      */
-    public static Map<String, String> generateImprovementsLocalized(CvAnalysisRequest request, List<String> missingSkills, MessageSource messages, Locale locale) {
+    public static Map<String, String> generateImprovementsLocalized(CvAnalysisRequest request,
+            List<String> missingSkills, MessageSource messages, Locale locale) {
         Map<String, String> improvements = new HashMap<>();
 
         if (!missingSkills.isEmpty()) {
-            String text = messages.getMessage("improvements.skills", new Object[] { String.join(", ", missingSkills) }, locale);
+            String text = messages.getMessage("improvements.skills", new Object[] { String.join(", ", missingSkills) },
+                    locale);
             improvements.put(messages.getMessage("improvements.section.skills", null, locale), text);
         }
 
@@ -428,20 +431,24 @@ public class IASearchUtils {
 
     public static String generateOverallFeedback(double matchPercentage, int missingSkillsCount) {
         if (matchPercentage >= 80) {
-            return "Excellent ! Votre CV correspond très bien au poste visé. Quelques ajustements mineurs et vous êtes prêt à postuler.";
+            return "Excellent! Your CV is a great match for the targeted position. Just a few minor adjustments and you're ready to apply.";
         } else if (matchPercentage >= 60) {
-            return "Bon profil ! Il vous manque quelques compétences clés (" + missingSkillsCount + "). Suivez les formations recommandées pour renforcer votre candidature.";
+            return "Good profile! You are missing some key skills (" + missingSkillsCount
+                    + "). Consider the recommended training to strengthen your application.";
         } else if (matchPercentage >= 40) {
-            return "Profil prometteur mais nécessite du travail. Concentrez-vous sur l'acquisition des " + missingSkillsCount + " compétences manquantes identifiées.";
+            return "Promising profile, but some work is needed. Focus on acquiring the " + missingSkillsCount
+                    + " missing skills identified.";
         } else {
-            return "Votre profil nécessite une mise à niveau importante pour ce poste. Nous vous recommandons de suivre les formations proposées et d'acquérir de l'expérience pratique.";
+            return "Your profile requires significant improvement for this position. We recommend following the suggested training and gaining practical experience.";
         }
     }
 
     /**
-     * Version localisée de generateOverallFeedback utilisant MessageSource et Locale.
+     * Version localisée de generateOverallFeedback utilisant MessageSource et
+     * Locale.
      */
-    public static String generateOverallFeedbackLocalized(double matchPercentage, int missingSkillsCount, MessageSource messages, Locale locale) {
+    public static String generateOverallFeedbackLocalized(double matchPercentage, int missingSkillsCount,
+            MessageSource messages, Locale locale) {
         if (matchPercentage >= 80) {
             return messages.getMessage("feedback.excellent", null, locale);
         } else if (matchPercentage >= 60) {

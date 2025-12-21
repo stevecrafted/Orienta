@@ -18,7 +18,7 @@ export default function AnalyseForm() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [cvFile, setCvFile] = useState<File | null>(null)
-  const [jobDescription, setJobDescription] = useState("") 
+  const [jobDescription, setJobDescription] = useState("")
   const router = useRouter()
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -63,68 +63,68 @@ export default function AnalyseForm() {
   return (
     <>
       {loading && <HtmlLoaderClient />}
-    <form id="analyse-form" onSubmit={handleSubmit} encType="multipart/form-data" noValidate>
-      <input type="hidden" name="method" id="method-field" value={method} />
+      <form id="analyse-form" onSubmit={handleSubmit} encType="multipart/form-data" noValidate>
+        <input type="hidden" name="method" id="method-field" value={method} />
 
-      <SectionMixed
-        jobDescription={jobDescription}
-        setJobDescription={setJobDescription}
-      />
+        <SectionMixed
+          jobDescription={jobDescription}
+          setJobDescription={setJobDescription}
+        />
 
-      <fieldset style={{ border: 0, padding: 0, margin: 0 }}>
-        <legend style={{ fontSize: '16px', fontWeight: 600, marginBottom: '16px' }}>{t('chooseCV')}</legend>
+        <fieldset style={{ border: 0, padding: 0, margin: 0 }}>
+          <legend style={{ fontSize: '16px', fontWeight: 600, marginBottom: '16px' }}>{t('chooseCV')}</legend>
 
 
-        <div id="cv-upload-area" className="field">
-          {!cvFile ? (
-            <FileUploadZone
-              onFileSelect={(file) => setCvFile(file)}
-              accept=".pdf,.doc,.docx,.txt,.jpg,.jpeg,.png"
-              disabled={loading}
-            />
-          ) : (
-            <CvPreview
-              file={cvFile}
-              onRemove={() => setCvFile(null)}
-            />
-          )}
+          <div id="cv-upload-area" className="field">
+            {!cvFile ? (
+              <FileUploadZone
+                onFileSelect={(file) => setCvFile(file)}
+                accept=".pdf,.doc,.docx,.txt,.jpg,.jpeg,.png"
+                disabled={loading}
+              />
+            ) : (
+              <CvPreview
+                file={cvFile}
+                onRemove={() => setCvFile(null)}
+              />
+            )}
+          </div>
+
+          <div id="cv-saved-area" className="field" style={{ display: 'none' }}>
+            <label htmlFor="saved-cv">CV sauvegardé</label>
+            <select id="saved-cv" name="saved_cv">
+              <option value="">-- Aucun sélectionné --</option>
+              <option value="CV_steve_2025.pdf">CV_steve_2025.pdf (mis à jour le 2025-11-16)</option>
+            </select>
+            <div className="small-muted">Sélectionnez un CV sauvegardé (simulé).</div>
+          </div>
+        </fieldset>
+
+        {error && (
+          <div className="message-area error" style={{
+            padding: '12px',
+            borderRadius: '8px',
+            background: '#fee',
+            color: '#c00',
+            marginTop: '16px'
+          }}>
+            {error}
+          </div>
+        )}
+
+        <div className="footer">
+          <div className="small-muted">{t('aiHelper')}</div>
+          <div style={{ display: 'flex', gap: '8px' }}>
+            <button type="submit" className="btn" id="analyse-btn" disabled={loading}>
+              {loading ? t('analyzing') : t('analyze')}
+            </button>
+            <button type="reset" className="btn secondary" id="reset-btn" disabled={loading}>
+              {t('reset')}
+            </button>
+          </div>
         </div>
 
-        <div id="cv-saved-area" className="field" style={{ display: 'none' }}>
-          <label htmlFor="saved-cv">CV sauvegardé</label>
-          <select id="saved-cv" name="saved_cv">
-            <option value="">-- Aucun sélectionné --</option>
-            <option value="CV_steve_2025.pdf">CV_steve_2025.pdf (mis à jour le 2025-11-16)</option>
-          </select>
-          <div className="small-muted">Sélectionnez un CV sauvegardé (simulé).</div>
-        </div>
-      </fieldset>
-
-      {error && (
-        <div className="message-area error" style={{
-          padding: '12px',
-          borderRadius: '8px',
-          background: '#fee',
-          color: '#c00',
-          marginTop: '16px'
-        }}>
-          {error}
-        </div>
-      )}
-
-      <div className="footer">
-        <div className="small-muted">{t('aiHelper')}</div>
-        <div style={{ display: 'flex', gap: '8px' }}>
-          <button type="submit" className="btn" id="analyse-btn" disabled={loading}>
-            {loading ? t('analyzing') : t('analyze')}
-          </button>
-          <button type="reset" className="btn secondary" id="reset-btn" disabled={loading}>
-            {t('reset')}
-          </button>
-        </div>
-      </div>
-
-    </form>
+      </form>
     </>
   )
 }

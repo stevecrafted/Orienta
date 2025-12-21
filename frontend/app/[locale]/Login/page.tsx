@@ -29,32 +29,97 @@ export default function LoginPage() {
       localStorage.setItem('accessToken', res.data.token)
       localStorage.setItem('currentUser', JSON.stringify(res.data.utilisateur))
     } catch {}
-    // Retour à la page précédente
+    // Return to previous page
     router.back()
   }
 
   return (
     <div>
       <Header />
-      <main className="ma-main-container" style={{ maxWidth: 480, margin: '0 auto' }}>
-        <h1>{t('title')}</h1>
-        <form onSubmit={onSubmit}>
-          <div className="field">
-            <label>{t('email')}</label>
-            <input type="email" value={email} onChange={(e)=>setEmail(e.target.value)} required />
+      <main className="ma-auth-box" style={{ maxWidth: 900, margin: '40px auto' }}>
+        <div className="ma-auth-content">
+          <div className="ma-auth-brand">
+            <div className="ma-auth-logo">
+              <span className="ma-auth-logo-icon">🚀</span>
+            </div>
+            <p className="ma-auth-brand-name">Orienta</p>
           </div>
-          <div className="field">
-            <label>{t('password')}</label>
-            <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)} required />
+          
+          <div className="ma-auth-content-main">
+            <h1 className="ma-auth-title">
+              Find Jobs and Training Faster
+            </h1>
+            
+            <p className="ma-auth-subtitle">
+              Import your CV, get AI-powered matches and recommended training to boost your career.
+            </p>
+            
+            <ul className="ma-auth-features">
+              <li className="ma-auth-feature-item">
+                <div className="ma-auth-feature-check">✓</div>
+                <span>Smart AI-powered matching</span>
+              </li>
+              <li className="ma-auth-feature-item">
+                <div className="ma-auth-feature-check">✓</div>
+                <span>Personalized training recommendations</span>
+              </li>
+              <li className="ma-auth-feature-item">
+                <div className="ma-auth-feature-check">✓</div>
+                <span>Track your applications</span>
+              </li>
+            </ul>
           </div>
-          {error && <div style={{ color: 'red', marginTop: 8 }}>{error}</div>}
-          <div style={{ marginTop: 16, display: 'flex', gap: 8 }}>
-            <button type="submit" className="ma-page2-btn-register" disabled={loading}>
-              {loading ? t('submitting') : t('submit')}
-            </button>
-            <button type="button" className="ma-page2-btn-open" onClick={()=>router.push('/Register')}>{t('createAccount')}</button>
+          
+          <div className="ma-auth-indicators">
+            <div className="ma-auth-indicator ma-auth-indicator-active"></div>
+            <div className="ma-auth-indicator ma-auth-indicator-inactive"></div>
+            <div className="ma-auth-indicator ma-auth-indicator-inactive"></div>
           </div>
-        </form>
+        </div>
+        
+        <div className="ma-auth-form-section">
+          <div className="ma-auth-form-header">
+            <h3>{t('title')}</h3>
+            <p>Sign in to continue</p>
+          </div>
+          <form onSubmit={onSubmit} style={{width:'100%'}}>
+            <div style={{marginBottom:12}}>
+              <label style={{display:'block', marginBottom:6}}>{t('email')}</label>
+              <div className="ma-auth-input-container">
+                <input 
+                  type="email" 
+                  className="ma-auth-input"
+                  value={email} 
+                  onChange={(e)=>setEmail(e.target.value)} 
+                  required 
+                />
+              </div>
+            </div>
+            <div style={{marginBottom:12}}>
+              <label style={{display:'block', marginBottom:6}}>{t('password')}</label>
+              <div className="ma-auth-input-container">
+                <input 
+                  type="password" 
+                  className="ma-auth-input"
+                  value={password} 
+                  onChange={(e)=>setPassword(e.target.value)} 
+                  required 
+                />
+              </div>
+            </div>
+            {error && <div style={{ color: 'var(--error,#e74c3c)', marginTop: 8 }}>{error}</div>}
+            <div style={{marginTop:12}}>
+              <button type="submit" className="ma-auth-submit-btn" disabled={loading}>
+                {loading ? t('submitting') : t('submit')}
+              </button>
+            </div>
+            <div style={{marginTop:12, width:'100%', textAlign:'center'}}>
+              <button type="button" className="ma-page2-btn-open" onClick={()=>router.push('/Register')}>
+                {t('createAccount')}
+              </button>
+            </div>
+          </form>
+        </div>
       </main>
     </div>
   )
