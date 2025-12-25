@@ -42,4 +42,4 @@ logs/
 ./src/main/resources/application.properties
 
 # Ignore local application config (generic)
-application.properties
+# application.properties
