@@ -1,5 +1,5 @@
 // API Client Configuration
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8099/api';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://orienta-ik8k.onrender.com/api';
 
 export interface ApiResponse<T> {
   data?: T;

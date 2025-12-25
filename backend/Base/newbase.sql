@@ -1,11 +1,11 @@
 \c postgres;
 
 -- DROP and CREATE fresh database (ATTENTION: destructive)
-DROP DATABASE IF EXISTS orienta;
-CREATE DATABASE orienta;
+DROP DATABASE IF EXISTS neondb;
+CREATE DATABASE neondb;
 
 -- Connect to new DB
-\c orienta;
+\c neondb;
 
 -- =============================
 -- Schema (with updated sizes)

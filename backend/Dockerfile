@@ -1,18 +1,14 @@
 FROM maven:3.8.8-eclipse-temurin-17 AS build
 WORKDIR /workspace
 
-# copy maven wrapper and pom first to leverage cache
-COPY mvnw .
-COPY .mvn .mvn
 COPY pom.xml .
-RUN chmod +x mvnw || true
+RUN mvn dependency:go-offline -B
 
-# copy source and build
 COPY src ./src
-RUN ./mvnw -B -DskipTests clean package
+RUN mvn clean package -DskipTests
 
 FROM eclipse-temurin:17-jre
 WORKDIR /app
-COPY --from=build /workspace/target/*.jar app.jar
+COPY --from=build /workspace/target/*.war app.war
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","/app/app.jar"]
+ENTRYPOINT ["java","-jar","app.war"]

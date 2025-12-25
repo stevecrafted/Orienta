@@ -88,7 +88,7 @@ export default function PDFExportButton({ resumeRef }: PDFExportButtonProps) {
             // Create PDF
             const imgData = canvas.toDataURL("image/png")
             const pdf = new jsPDF({
-                Orientation: "portrait",
+                orientation: "portrait",
                 unit: "mm",
                 format: "a4",
             })

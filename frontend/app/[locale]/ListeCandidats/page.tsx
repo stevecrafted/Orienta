@@ -319,13 +319,13 @@ export default function ListeCandidatsRecruteur() {
                             setContactError(null)
                             setActiveContact(null)
                             try {
-                              const res = await apiClient.get(`/cv-modeles/${candidat.id}`)
+                              const res = await apiClient.get<Candidat>(`/cv-modeles/${candidat.id}`)
                               const data = res.data
                               let contenu = data?.contenuJson
                               if (typeof contenu === 'string') {
                                 try { contenu = JSON.parse(contenu) } catch { }
                               }
-                              const header = contenu?.header || {}
+                              const header = (contenu?.header || {}) as { email?: string; phone?: string; name?: string }
                               setActiveContact({ email: header.email, phone: header.phone, name: header.name })
                             } catch (err) {
                               console.error('Erreur fetch contact:', err)
