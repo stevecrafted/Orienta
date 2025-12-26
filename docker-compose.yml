@@ -1,0 +1,45 @@
+services:
+  db:
+    image: postgres:15
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: Orienta
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: steve
+    volumes:
+      - db_data:/var/lib/postgresql/data
+      - ./backend/Base:/docker-entrypoint-initdb.d:ro
+    ports:
+      - "5432:5432"
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    depends_on:
+      - db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/Orienta
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: steve
+      SERVER_PORT: 8091
+    ports:
+      - "8091:8091"
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    depends_on:
+      - backend
+    environment:
+      NODE_ENV: production
+    ports:
+      - "3000:3000"
+
+volumes:
+  db_data:
+
+networks:
+  default:
+    name: Orienta_network

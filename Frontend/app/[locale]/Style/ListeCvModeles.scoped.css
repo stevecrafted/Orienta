@@ -1,0 +1,413 @@
+/* LinkedIn-inspired styles for candidates list - UNIQUE CLASSES */
+
+.candidats-liste-page {
+  min-height: 100vh;
+  background: #f3f2ef;
+  padding-bottom: 60px;
+}
+
+.candidats-liste-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.candidats-liste-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.candidats-liste-header h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 8px;
+}
+
+.candidats-liste-header .subtitle {
+  font-size: 1rem;
+  color: #718096;
+  font-weight: 400;
+}
+
+/* Filters Section - LinkedIn style */
+.candidats-liste-filters {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e1e5e9;
+}
+
+.candidats-liste-search {
+  margin-bottom: 16px;
+}
+
+.candidats-liste-search-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #e1e5e9;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  background: #f3f2ef;
+}
+
+.candidats-liste-search-input:focus {
+  outline: none;
+  border-color: #0a66c2;
+  background: white;
+  box-shadow: 0 0 0 1px #0a66c2;
+}
+
+.candidats-liste-filters-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.candidats-liste-filter-select {
+  flex: 1;
+  min-width: 180px;
+  padding: 10px 12px;
+  border: 1px solid #e1e5e9;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.candidats-liste-filter-select:focus {
+  outline: none;
+  border-color: #0a66c2;
+  box-shadow: 0 0 0 1px #0a66c2;
+}
+
+.candidats-liste-reset-btn {
+  padding: 10px 20px;
+  background-color: #e7f3ff;
+  color: #0a66c2;
+  border: 1px solid #0a66c2;
+  border-radius: 24px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.candidats-liste-reset-btn:hover {
+  background-color: #0a66c2;
+  color: white;
+  transform: none;
+}
+
+/* Results Header */
+.candidats-liste-results-header {
+  margin-bottom: 20px;
+  padding: 12px 16px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.candidats-liste-results-header p {
+  font-size: 0.95rem;
+  color: #5e6c84;
+  font-weight: 500;
+}
+
+.candidats-liste-loading,
+.candidats-liste-error,
+.candidats-liste-no-results {
+  text-align: center;
+  padding: 60px 20px;
+  font-size: 1.1rem;
+  color: #5e6c84;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.candidats-liste-error {
+  color: #d93025;
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+}
+
+.candidats-liste-no-results {
+  color: #5e6c84;
+  font-style: italic;
+}
+
+/* Candidates Grid - LinkedIn card style */
+.candidats-liste-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.candidats-liste-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid #e1e5e9;
+}
+
+.candidats-liste-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.candidats-liste-card-header {
+  position: relative;
+  height: 80px;
+  background: linear-gradient(135deg, #0a66c2 0%, #004182 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.candidats-liste-avatar {
+  position: absolute;
+  bottom: -30px;
+  left: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid white;
+  overflow: hidden;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.candidats-liste-avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.candidats-liste-score-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.candidats-liste-card-body {
+  padding: 40px 20px 20px 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.candidats-liste-nom {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.candidats-liste-metier {
+  font-size: 0.95rem;
+  color: #0a66c2;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.candidats-liste-location {
+  font-size: 0.85rem;
+  color: #5e6c84;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.candidats-liste-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+  padding: 12px;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+}
+
+.candidats-liste-info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.candidats-liste-info-label {
+  font-weight: 500;
+  color: #5e6c84;
+}
+
+.candidats-liste-info-value {
+  color: #2d3748;
+  font-weight: 500;
+  text-align: right;
+  max-width: 60%;
+  word-break: break-word;
+}
+
+.candidats-liste-competences-section {
+  margin-bottom: 16px;
+}
+
+.candidats-liste-competences-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #5e6c84;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.candidats-liste-competences-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.candidats-liste-competence-tag {
+  background-color: #e7f3ff;
+  color: #0a66c2;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.candidats-liste-competence-tag.more {
+  background-color: #f3f2ef;
+  color: #5e6c84;
+}
+
+.candidats-liste-view-btn {
+  background: linear-gradient(135deg, #0a66c2 0%, #004182 100%);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 24px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  margin-top: auto;
+}
+
+.candidats-liste-view-btn:hover {
+  background: linear-gradient(135deg, #004182 0%, #0a66c2 100%);
+  transform: none;
+  box-shadow: 0 2px 8px rgba(10, 102, 194, 0.3);
+}
+
+.candidats-liste-view-btn:active {
+  transform: scale(0.98);
+}
+
+.candidats-liste-button-arrow {
+  transition: transform 0.2s ease;
+}
+
+.candidats-liste-view-btn:hover .candidats-liste-button-arrow {
+  transform: translateX(2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .candidats-liste-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .candidats-liste-filters-row {
+    flex-direction: column;
+  }
+
+  .candidats-liste-filter-select {
+    width: 100%;
+  }
+
+  .candidats-liste-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .candidats-liste-card-header {
+    height: 60px;
+  }
+
+  .candidats-liste-avatar {
+    width: 50px;
+    height: 50px;
+    bottom: -25px;
+    left: 15px;
+  }
+
+  .candidats-liste-card-body {
+    padding: 35px 15px 15px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .candidats-liste-header h1 {
+    font-size: 1.3rem;
+  }
+
+  .candidats-liste-header .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .candidats-liste-filters {
+    padding: 15px;
+  }
+
+  .candidats-liste-card-body {
+    padding: 30px 12px 12px 12px;
+  }
+
+  .candidats-liste-info-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .candidats-liste-info-value {
+    text-align: left;
+    max-width: 100%;
+  }
+}

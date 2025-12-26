@@ -1,0 +1,314 @@
+{
+  "common": {
+    "home": "Accueil",
+    "login": "Se connecter",
+    "register": "S'inscrire",
+    "logout": "Se déconnecter",
+    "about": "À propos",
+    "contact": "Contact",
+    "noContactEmail": "Aucun e-mail de contact disponible",
+    "privacy": "Politique de confidentialité",
+    "loading": "",
+    "error": "Erreur",
+    "success": "Succès",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "title": "Recherche de formations pour un poste",
+    "resultTitle": "Résultat de l'analyse",
+    "edit": "Modifier",
+    "close": "Fermer",
+    "back": "Retour"
+  ,
+    "required": "(requis)"
+  },
+  "nav": {
+    "createCV": "Créer mon CV",
+    "jobSearch": "Recherche d'emploi",
+    "training": "Formations",
+    "candidates": "Candidats",
+    "myProfile": "Mon Profil",
+    "jobDetails": "Détails du poste",
+    "description": "Description",
+    "matchingSkills": "Compétences correspondantes ({count})",
+    "improvementsTitle": "Recommandations d'amélioration",
+    "editCvButton": "Modifier mon CV",
+    "missingSkillsTitle": "Compétences manquantes ({count})",
+    "boostTitle": "Prêt à booster votre profil ?",
+    "boostDesc": "Découvrez les formations recommandées pour acquérir les compétences manquantes et maximiser vos chances d'obtenir ce poste.",
+    "boostButton": "🚀 Booster mon profil →",
+    "savedJobs": "Mes Offres"
+  },
+  "home": {
+    "hero": {
+      "title": "Améliore ton CV et décroche le poste que tu veux",
+      "subtitle": "Analyse ton CV, découvre tes compétences manquantes et vise le job de tes rêves.",
+      "createCV": "Créer mon CV",
+      "searchJob": "Rechercher un travail",
+      "searchTraining": "Recherche de formations pour un poste"
+    },
+    "features": {
+      "title": "Fonctionnalités essentielles",
+      "createCV": {
+        "title": "Créer mon CV",
+        "description": "Créez un CV professionnel en quelques minutes avec des modèles modernes.",
+        "link": "Aller à la création"
+      },
+      "searchTraining": {
+        "title": "Recherche de formations",
+        "description": "Analysez votre CV par rapport à une offre et découvrez les compétences manquantes.",
+        "link": "Analyser maintenant"
+      },
+      "searchJob": {
+        "title": "Rechercher un travail",
+        "description": "Trouvez des offres pertinentes et lancez l'analyse en un clic.",
+        "link": "Chercher un poste"
+      }
+    },
+    "recruiter": {
+      "badge": "Espace Recruteur",
+      "title": "Trouvez les talents parfaits pour votre entreprise",
+      "description": "Accédez à des profils candidats parsés et standardisés, avec des outils de filtrage et de présélection pour identifier rapidement les candidats qualifiés.",
+      "feature1": {
+        "title": "Recherche de talents par compétences",
+        "description": "Identifiez rapidement les candidats possédant les compétences spécifiques dont vous avez besoin."
+      },
+      "feature2": {
+        "title": "Profils parsés et standardisés",
+        "description": "Extraction et normalisation automatiques des données candidats pour une comparaison facile."
+      },
+      "feature3": {
+        "title": "Filtres et présélections rapides",
+        "description": "Utilisez des filtres, des tags et des aperçus rapides pour constituer une présélection efficacement."
+      },
+      "cta": "Rechercher des talents"
+    },
+    "howItWorks": {
+      "title": "Comment ça marche ?",
+      "step1": "Importez ou créez votre CV en quelques minutes.",
+      "step2": "Entrez le poste que vous visez.",
+      "step3": "Recevez une analyse complète et des recommandations."
+    },
+    "why": {
+      "title": "Pourquoi améliorer votre CV ?",
+      "description": "90% des candidats ne décrochent pas d'entretien uniquement parce que leur CV ne montre pas clairement les compétences recherchées. Avec Mitady Asa, identifiez vos points faibles et augmentez vos chances d'obtenir le poste de vos rêves."
+    },
+    "stats": {
+      "candidates": "Candidats actifs",
+      "domains": "Domaines d'expertise",
+      "satisfaction": "Taux de satisfaction"
+    },
+    "cta": {
+      "title": "Prêt à commencer votre parcours ?",
+      "subtitle": "Rejoignez des milliers de recruteurs qui font confiance à Orienta",
+      "startFree": "Commencer gratuitement",
+      "login": "Se connecter"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Se connecter",
+      "email": "Email",
+      "password": "Mot de passe",
+      "submit": "Se connecter",
+      "submitting": "Connexion...",
+      "createAccount": "Créer un compte",
+      "invalidCredentials": "Identifiants invalides"
+    },
+    "register": {
+      "title": "Créer un compte",
+      "name": "Nom",
+      "email": "Email",
+      "lastName": "Prénom",
+      "firstName" : "Nom",
+      "password": "Mot de passe",
+      "confirmPassword": "Confirmer le mot de passe",
+      "submit": "S'inscrire",
+      "submitting": "Inscription...",
+      "alreadyHaveAccount": "Déjà un compte ?",
+      "loginLink": "Se connecter"
+    }
+  },
+  "cv": {
+    "title": "Mon CV",
+    "create": "Créer un CV",
+    "edit": "Modifier le CV",
+    "preview": "Aperçu",
+    "download": "Télécharger",
+    "template": "Modèle",
+    "personalInfo": "Informations personnelles",
+    "experience": "Expérience",
+    "education": "Formation",
+    "skills": "Compétences",
+    "languages": "Langues",
+    "projects": "Projets",
+    "achievements": "Réalisations"
+    ,"publishMarketplace": "Publier sur le marketplace",
+    "updateLabel": "Mettre à jour"
+  },
+  "job": {
+    "search": "Recherche d'emploi",
+    "title": "Titre du poste",
+    "company": "Entreprise",
+    "location": "Localisation",
+    "type": "Type de contrat",
+    "description": "Description",
+    "requirements": "Exigences",
+    "apply": "Postuler",
+    "save": "Sauvegarder",
+    "saved": "Sauvegardé"
+  },
+  "training": {
+    "title": "Formations",
+    "search": "Rechercher une formation",
+    "duration": "Durée",
+    "level": "Niveau",
+    "price": "Prix",
+    "enroll": "S'inscrire",
+    "details": "Détails"
+  },
+  "candidates": {
+    "title": "Liste des candidats",
+    "search": "Rechercher un candidat",
+    "viewProfile": "Voir le profil",
+    "contact": "Contacter",
+    "experience": "Expérience",
+    "education": "Formation",
+    "skills": "Compétences",
+    "marketplace": "Marketplace",
+    "savedCandidates": "Candidats sauvegardés",
+    "savedJobs": "Postes sauvegardés",
+    "myCV": "Mon CV",
+    "loading": "",
+    "errorLoading": "Erreur lors du chargement des candidats",
+    "noResults": "Aucun candidat trouvé",
+    "contactDetailsTitle": "Coordonnées du candidat",
+    "contactEmail": "E-mail",
+    "contactPhone": "Téléphone",
+    "contactLoading": "Chargement des coordonnées...",
+    "contactLoadingError": "Impossible de charger les coordonnées.",
+    "contactNoData": "Aucune donnée de contact disponible.",
+    "openMail": "Ouvrir le client mail",
+    "filters": "Filtres",
+    "domain": "Domaine",
+    "allCategories": "Toutes les catégories",
+    "searchPlaceholder": "Rechercher par nom, titre ou compétences..."
+  },
+  "analysis": {
+    "title": "Recherche de formations pour un poste",
+    "chooseCV": "Choisir un CV",
+    "jobDescription": "Description du poste",
+    "jobDescriptionPlaceholder": "Entrez la description du poste...",
+    "jobDescriptionHelp": "Plus la description est détaillée, plus l'analyse sera précise.",
+    "analyze": "Recherche de formations",
+    "analyzing": "Analyse en cours...",
+    "reset": "Réinitialiser",
+    "error": "Une erreur est survenue lors de l'analyse",
+    "fillJobDescription": "Veuillez remplir le titre et la description du poste",
+    "selectFile": "Veuillez sélectionner un fichier CV",
+    "aiHelper": "Analysez votre CV avec notre IA pour obtenir des recommandations personnalisées."
+    ,
+    "chooseMethod": "Choisissez la méthode",
+    "methodMixedTitle": "Saisie mixte",
+    "methodMixedDesc": "Saisissez manuellement titre, description, responsabilités, compétences",
+    "clickToChoose": "Cliquez pour choisir ou glissez-déposez votre CV",
+    "fileFormats": "PDF, DOC, DOCX, TXT, JPG, PNG • Max 10 MB",
+    "extractionInfo": "Extraction intelligente avec IA",
+    "fileTypeNotAccepted": "Type de fichier non accepté. Formats acceptés: {formats}",
+    "removeFile": "Supprimer le fichier",
+    "previewAlt": "Aperçu du CV",
+    "previewPdfTitle": "Aperçu du CV PDF",
+    "noPreview": "Aperçu non disponible pour ce type de fichier",
+    "fileWillBeProcessed": "Le fichier sera traité lors de l'analyse"
+  },
+  "results": {
+    "loadingResults": "Chargement des résultats...",
+    "matchScore": "Score de correspondance",
+    "matchScoreDesc": "Votre CV correspond à",
+    "ofRequirements": "des exigences du poste",
+    "missingSkills": "Compétences manquantes",
+    "recommendations": "Formations recommandées",
+    "certified": "Certifié",
+    "free": "Gratuit",
+    "viewFormations": "Voir toutes les formations",
+    "savePost": "Enregistrer ce poste",
+    "postSaved": "Poste enregistré avec succès !",
+    "strengthsWeaknesses": "Points forts et axes d'amélioration"
+  },
+  "jobResearch": {
+    "title": "Recherche d'emploi",
+    "location": "Localisation",
+    "locationPlaceholder": "Antananarivo",
+    "howItWorksTitle": "Comment ça marche ?",
+    "howItWorksDesc": "Nous analysons votre CV pour extraire vos compétences et expériences, puis construisons des requêtes et filtres ciblés pour mettre en avant les offres pertinentes à examiner et à mettre en favoris.",
+    "includeRemote": "Inclure le télétravail",
+    "search": "Rechercher",
+    "searching": "Recherche en cours...",
+    "resultsTitle": "Résultats de recherche d'emploi",
+    "noResultsHeader": "Aucun résultat trouvé",
+    "pleaseSearch": "Veuillez d'abord effectuer une recherche.",
+    "performSearchButton": "Effectuer une recherche",
+    "optimizedQueryTitle": "Requête Google optimisée",
+    "querySuggestion": "Si les postes ci-dessous ne vous conviennent pas, utilisez le bouton « Rechercher sur Google » pour élargir les résultats.",
+    "noJobsFiltered": "Aucune offre ne correspond aux filtres sélectionnés.",
+    "open": "Ouvrir",
+    "defaultProfileTitle": "Professionnel",
+    "yearsSingular": "an",
+    "yearsPlural": "ans",
+    "selectFile": "Veuillez sélectionner un fichier CV",
+    "profileExtracted": "Profil extrait",
+    "jobsFound": "Offres d'emploi trouvées",
+    "googleQuery": "Requête de recherche générée",
+    "copyQuery": "Copier la requête",
+    "searchOnGoogle": "Rechercher sur Google",
+    "queryCopied": "Requête copiée dans le presse-papier !",
+    "filters": {
+      "all": "Toutes",
+      "remote": "Télétravail",
+      "onsite": "Sur site"
+    },
+    "remote": "Télétravail",
+    "onsite": "Sur site",
+    "applyNow": "Postuler maintenant"
+  },
+  "formations": {
+    "title": "Formations pour ce poste",
+    "recommendedFormations": "Formations recommandées",
+    "recommendedBySkill": "Formations recommandées par compétence",
+    "missingSkills": "Compétences manquantes",
+    "jobDetails": "Détails du poste",
+    "alreadyOpened": "Déjà ouvert",
+    "open": "Ouvrir",
+    "postTitle": "Le poste que vous voulez :",
+    "saved": "Sauvegardé",
+    "profileTargeted": "Profil ciblé",
+    "missingSkillsHeader": "Les compétences qui vous manquent :",
+    "noMissingSkills": "Aucune compétence manquante détectée.",
+    "saveBoxDesc": "Enregistrez ce poste pour le retrouver dans vos postes importants avec ses formations associées.",
+    "saveBoxButton": "Enregistrer ce poste →",
+    "certified": "Certifié",
+    "free": "Gratuit",
+    "seeMore": "Voir plus",
+    "duration": "Durée",
+    "platform": "Plateforme",
+    "viewCourse": "Voir le cours",
+    "noFormations": "Aucune formation disponible",
+    "savePost": "Enregistrer le poste",
+    "postSaved": "Poste enregistré !",
+    "backToAnalysis": "Retour à l'analyse"
+  },
+  "savedPosts": {
+    "title": "Postes importants",
+    "loading": "",
+    "noSaved": "Aucun poste enregistré pour le moment. Allez sur \"Formations\" et cliquez \"Enregistrer le poste\".",
+    "salary": "Salaire",
+    "perMonth": "/ mois",
+    "formationsSaved": "formation(s) sauvegardée(s)",
+    "viewFormations": "Voir les formations associées",
+    "salaryNA": "Salaire: N/A"
+  },
+  "footer": {
+    "about": "À propos",
+    "contact": "Contact",
+    "privacy": "Politique de confidentialité"
+  }
+}

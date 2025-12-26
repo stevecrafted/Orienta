@@ -1,0 +1,75 @@
+spring.application.name=backend
+
+# Database (Postgres) - allow overriding from environment (used by Docker Compose)
+spring.datasource.url=jdbc:postgresql://localhost:5432/orienta
+spring.datasource.username=postgres
+spring.datasource.password=steve
+spring.datasource.driver-class-name=org.postgresql.Driver
+
+# JPA / Hibernate
+spring.jpa.hibernate.ddl-auto=none
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+
+# Optimisations de performance Hibernate
+# Batch processing pour réduire les appels DB
+spring.jpa.properties.hibernate.jdbc.batch_size=20
+spring.jpa.properties.hibernate.order_inserts=true
+spring.jpa.properties.hibernate.order_updates=true
+spring.jpa.properties.hibernate.batch_versioned_data=true
+
+# Statistiques Hibernate pour surveiller les performances
+spring.jpa.properties.hibernate.generate_statistics=true
+
+# Désactiver la vérification automatique des entités au commit (améliore les perfs)
+spring.jpa.properties.hibernate.enable_lazy_load_no_trans=false
+
+# Pool de connexions HikariCP (optimisé pour les performances)
+spring.datasource.hikari.maximum-pool-size=10
+spring.datasource.hikari.minimum-idle=5
+spring.datasource.hikari.connection-timeout=20000
+spring.datasource.hikari.idle-timeout=300000
+spring.datasource.hikari.max-lifetime=1200000
+spring.datasource.hikari.leak-detection-threshold=60000
+
+# Multipart file upload settings
+spring.servlet.multipart.enabled=true
+spring.servlet.multipart.max-file-size=50MB
+spring.servlet.multipart.max-request-size=50MB
+
+# Server port (can be overridden by PORT env var)
+server.port=8091
+
+# Logging
+logging.level.root=INFO
+logging.level.org.springframework.web=DEBUG
+logging.level.org.springframework.web.servlet.mvc.method.annotation=TRACE
+logging.level.com.example.backend=DEBUG
+logging.level.org.hibernate.SQL=DEBUG
+logging.level.org.hibernate.type.descriptor.sql.BasicBinder=TRACE
+logging.level.org.springframework.security=DEBUG
+logging.pattern.console=%d{yyyy-MM-dd HH:mm:ss} - %msg%n
+logging.pattern.file=%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n
+
+# OpenAI Configuration for Job Research
+openai.model=o4-mini
+openai.temperature=0.3
+openai.max-tokens=200
+
+# Google Custom Search Configuration
+google.search.max.results=10
+
+# Job Research Configuration
+job.research.allowed.file.types=application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document
+job.research.max.file.size=10MB
+job.research.default.location=Antananarivo
+
+# API Keys for AI and Search
+# OpenAI
+openai.api.key=
+
+# Google
+google.api.key=
+google.search.engine.id=
+google.gemini.api.key=

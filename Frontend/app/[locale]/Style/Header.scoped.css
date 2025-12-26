@@ -1,0 +1,473 @@
+/* ==================== KEEPER STYLE - HEADER ==================== */
+.mitady-asa-header {
+    background: white;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--shadow, 0 5px 15px rgba(0,0,0,0.1));
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.mitady-asa-logo {
+    min-width: 150px;
+}
+
+.mitady-asa-logo a {
+    text-decoration: none;
+}
+
+.logo-text {
+    color: var(--primary, #1a5fb4);
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: var(--transition, all 0.3s ease);
+}
+
+.logo-text:hover {
+    color: var(--primary-dark, #0d4a8a);
+}
+
+/* ==================== SEARCH BAR ==================== */
+.mitady-asa-search-container {
+    flex: 1;
+    max-width: 550px;
+    margin: 0 30px;
+}
+
+.mitady-asa-search-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.mitady-asa-search-icon {
+    position: absolute;
+    left: 15px;
+    color: var(--gray, #6c757d);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.mitady-asa-search-input {
+    width: 100%;
+    padding: 12px 15px 12px 45px;
+    border: 2px solid var(--light-gray, #e9ecef);
+    border-radius: var(--radius-md, 12px);
+    font-size: 14px;
+    outline: none;
+    transition: var(--transition, all 0.3s ease);
+    background-color: white;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.mitady-asa-search-input:focus {
+    border-color: var(--primary, #1a5fb4);
+    box-shadow: 0 0 0 3px rgba(26, 95, 180, 0.1);
+}
+
+.mitady-asa-search-input::placeholder {
+    color: var(--gray, #6c757d);
+}
+
+/* ==================== HEADER ACTIONS ==================== */
+.mitady-asa-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.mitady-asa-icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition, all 0.3s ease);
+    border-radius: 50%;
+    position: relative;
+}
+
+.mitady-asa-icon-button:hover {
+    background: var(--light, #f8f9fa);
+    transform: scale(1.05);
+}
+
+.mitady-asa-bell-icon,
+.mitady-asa-user-icon {
+    width: 24px;
+    height: 24px;
+    stroke: var(--dark, #2c3e50);
+    fill: none;
+    stroke-width: 2;
+}
+
+.notification-badge {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background: #e74c3c;
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 5px;
+    border-radius: 10px;
+    min-width: 18px;
+    text-align: center;
+}
+
+/* ==================== PROFILE DROPDOWN ==================== */
+.profile-dropdown-container {
+    position: relative;
+}
+
+.profile-button {
+    background: var(--light, #f8f9fa);
+    border: 2px solid var(--light-gray, #e9ecef);
+}
+
+.profile-button:hover {
+    background: white;
+    border-color: var(--primary, #1a5fb4);
+}
+
+.profile-dropdown {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    background: white;
+    border-radius: var(--radius-md, 12px);
+    box-shadow: var(--shadow-lg, 0 10px 30px rgba(0,0,0,0.15));
+    min-width: 260px;
+    overflow: hidden;
+    animation: fadeInDown 0.2s ease;
+    border: 1px solid var(--light-gray, #e9ecef);
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.profile-header {
+    padding: 20px;
+    background: var(--light, #f8f9fa);
+    border-bottom: 1px solid var(--light-gray, #e9ecef);
+}
+
+.profile-name {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--dark, #2c3e50);
+    margin-bottom: 4px;
+}
+
+.profile-email {
+    font-size: 0.9rem;
+    color: var(--gray, #6c757d);
+    margin: 0;
+}
+
+.profile-menu {
+    padding: 8px 0;
+}
+
+.profile-menu a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.profile-menu-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 20px;
+    color: var(--dark, #2c3e50);
+    transition: var(--transition, all 0.3s ease);
+    cursor: pointer;
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    font-size: 1rem;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.profile-menu-item:hover {
+    background: var(--light, #f8f9fa);
+    color: var(--primary, #1a5fb4);
+}
+
+.profile-menu-item svg {
+    color: var(--gray, #6c757d);
+}
+
+.profile-menu-item:hover svg {
+    color: var(--primary, #1a5fb4);
+}
+
+.profile-menu-divider {
+    height: 1px;
+    background: var(--light-gray, #e9ecef);
+    margin: 8px 0;
+}
+
+.logout-item {
+    color: #e74c3c;
+}
+
+.logout-item:hover {
+    background: rgba(231, 76, 60, 0.1);
+    color: #c0392b;
+}
+
+.logout-item svg {
+    color: #e74c3c;
+}
+
+.logout-item:hover svg {
+    color: #c0392b;
+}
+
+/* ==================== AUTH BUTTONS ==================== */
+.auth-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-secondary {
+    padding: 10px 24px;
+    border-radius: var(--radius-full, 50px);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition, all 0.3s ease);
+    border: 2px solid var(--light-gray, #e9ecef);
+    background: white;
+    color: var(--primary, #1a5fb4);
+    font-size: 0.95rem;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btn-secondary:hover {
+    background: var(--light, #f8f9fa);
+    border-color: var(--primary, #1a5fb4);
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    padding: 10px 24px;
+    border-radius: var(--radius-full, 50px);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition, all 0.3s ease);
+    border: none;
+    background: var(--primary, #1a5fb4);
+    color: white;
+    font-size: 0.95rem;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark, #0d4a8a);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow, 0 5px 15px rgba(0,0,0,0.1));
+}
+
+/* ==================== NAVIGATION ==================== */
+.main-navigation {
+    background: white;
+    padding: 15px 40px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    border-top: 1px solid var(--light-gray, #e9ecef);
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    text-decoration: none;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: var(--radius-full, 50px);
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--dark, #2c3e50);
+    background: none;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: var(--transition, all 0.3s ease);
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav-link:hover {
+    background: var(--light, #f8f9fa);
+    color: var(--primary, #1a5fb4);
+}
+
+.nav-link.active {
+    background: var(--primary, #1a5fb4);
+    color: white;
+    border-color: var(--primary, #1a5fb4);
+}
+
+.nav-link-featured {
+    background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+    color: white;
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-link-featured::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.nav-link-featured:hover::before {
+    left: 100%;
+}
+
+.nav-link-featured:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+}
+
+.nav-link svg {
+    stroke-width: 2;
+}
+
+/* ==================== MOBILE MENU ==================== */
+.mobile-menu-button {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 992px) {
+    .mitady-asa-header {
+        padding: 15px 30px;
+    }
+
+    .mitady-asa-search-container {
+        max-width: 400px;
+        margin: 0 20px;
+    }
+
+    .main-navigation {
+        padding: 12px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mitady-asa-header {
+        padding: 15px 20px;
+    }
+
+    .mitady-asa-search-container {
+        display: none;
+    }
+
+    .auth-buttons {
+        display: none;
+    }
+
+    .mobile-menu-button {
+        display: block;
+    }
+
+    .main-navigation {
+        display: none;
+        padding: 15px 20px;
+    }
+
+    .main-navigation.mobile-open {
+        display: block;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+
+    .nav-link {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .profile-dropdown {
+        right: auto;
+        left: 0;
+        min-width: 240px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mitady-asa-header {
+        padding: 12px 15px;
+    }
+
+    .logo-text {
+        font-size: 1.5rem;
+    }
+
+    .mitady-asa-actions {
+        gap: 8px;
+    }
+
+    .mitady-asa-icon-button {
+        padding: 8px;
+    }
+
+    .mitady-asa-bell-icon,
+    .mitady-asa-user-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .main-navigation {
+        padding: 12px 15px;
+    }
+
+    .nav-link {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+}

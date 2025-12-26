@@ -1,0 +1,314 @@
+{
+  "common": {
+    "home": "Fandraisana",
+    "login": "Hiditra",
+    "register": "Hisoratra anarana",
+    "logout": "Hivoaka",
+    "about": "Momba",
+    "contact": "Fifandraisana",
+    "privacy": "Politikan'ny tsiambaratelo",
+    "loading": "",
+    "error": "Tsy fetsy",
+    "success": "Nahomby",
+    "save": "Hitahiry",
+    "cancel": "Hanafoana",
+    "delete": "Hamafa",
+    "edit": "Hanova",
+    "close": "Hidy",
+    "back": "Hiverina"
+  ,
+    "required": "(ilaina)"
+  },
+  "nav": {
+    "createCV": "Hamorona CV",
+    "jobSearch": "Fikarohana asa",
+    "training": "Fiofanana",
+    "candidates": "Kandidà",
+    "myProfile": "Ny mombamiko",
+    "savedJobs": "Asa voatahiry"
+  },
+  "home": {
+    "hero": {
+      "title": "Ampitomboy ny CV-nao ary mahazoa ny asa tianao",
+      "subtitle": "Andinino ny CV-nao, hahita ny fahaiza-manao tsy ampy ary mikendry ny asa nofinofinao.",
+      "createCV": "Hamorona CV",
+      "searchJob": "Hikaroka asa",
+      "searchTraining": "Fikarohana fiofanana ho an'ny toerana iray"
+    },
+    "features": {
+      "title": "Toetra fototra",
+      "createCV": {
+        "title": "Hamorona CV",
+        "description": "Mamorona CV matihanina ao anatin'ny minitra vitsivitsy miaraka amin'ny maodely maoderina.",
+        "link": "Mandeha amin'ny famoronana"
+      },
+      "searchTraining": {
+        "title": "Fikarohana fiofanana",
+        "description": "Andinino ny CV-nao amin'ny tolotra asa ary hahita ny fahaiza-manao tsy ampy.",
+        "link": "Andinino izao"
+      },
+      "searchJob": {
+        "title": "Hikaroka asa",
+        "description": "Mahita tolotra mifandraika ary atombohy ny fanadihadiana amin'ny fipihana iray.",
+        "link": "Mitady toerana"
+      }
+    },
+    "recruiter": {
+      "badge": "Toerana ho an'ny Recruiter",
+      "title": "Mahita ny talenta tonga lafatra ho an'ny orinasanao",
+      "description": "Midira amin'ny mombamomba ny kandidà voavaky sy voalamina, miaraka amin'ny fitaovana haingana hisafidianana sy hanangonana lisitra fohy amin'ireo kandida mendrika.",
+      "feature1": {
+        "title": "Fikarohana talenta araka ny fahaiza-manao",
+        "description": "Fantaro haingana ny kandidà manana ny fahaiza-manao manokana ilainao."
+      },
+      "feature2": {
+        "title": "Profil voavaky sy voalamina",
+        "description": "Maka sy manara-penitra ho azy ny fampahalalana kandida ho mora ampitahaina."
+      },
+      "feature3": {
+        "title": "Sivana haingana & lisitra fohy",
+        "description": "Ampiasao ny sivana, marika ary fijery haingana mba hanamboatra lisitra fohy."
+      },
+      "cta": "Hikaroka talenta"
+    },
+    "howItWorks": {
+      "title": "Ahoana no fanaovana izany?",
+      "step1": "Ampidiro na hamorona ny CV-nao ao anatin'ny minitra vitsivitsy.",
+      "step2": "Ampidiro ny toerana kendrena.",
+      "step3": "Mahazo fanadihadiana feno sy tolo-kevitra."
+    },
+    "why": {
+      "title": "Nahoana no tokony hanatsara ny CV-nao?",
+      "description": "90% ny kandidà tsy mahazo fanadinadiana satria ny CV-ny tsy mampiseho mazava ny fahaiza-manao tadiavina. Miaraka amin'ny Mitady Asa, fantaro ny tsy fahamendrehanao ary ampitomboy ny fahafahanao mahazo ny asa nofinofinao."
+    },
+    "stats": {
+      "candidates": "Kandidà mavitrika",
+      "domains": "Sehatry ny fahaiza-manao",
+      "satisfaction": "Tahan'ny fahafaham-po"
+    },
+    "cta": {
+      "title": "Vonona hanomboka ny dianao ve?",
+      "subtitle": "Miaraha amin'ny mpampiasa an'arivony izay matoky ny Orienta",
+      "startFree": "Manomboka maimaim-poana",
+      "login": "Hiditra"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Hiditra",
+      "email": "Mailaka",
+      "password": "Teny miafina",
+      "submit": "Hiditra",
+      "submitting": "Miditra...",
+      "createAccount": "Hamorona kaonty",
+      "invalidCredentials": "Tsy mety ny fahazoan-dàlana"
+    },
+    "register": {
+      "title": "Hamorona kaonty",
+      "name": "Anarana",
+      "email": "Mailaka",
+      "lastName": "Fanampin'anarana",
+      "firstName": "Anarana",
+      "password": "Teny miafina",
+      "confirmPassword": "Hamarino ny teny miafina",
+      "submit": "Hisoratra anarana",
+      "submitting": "Misoratra anarana...",
+      "alreadyHaveAccount": "Efa manana kaonty?",
+      "loginLink": "Hiditra"
+    }
+  },
+  "cv": {
+    "title": "Ny CV-ko",
+    "create": "Hamorona CV",
+    "edit": "Hanova CV",
+    "preview": "Topi-maso",
+    "download": "Hampidina",
+    "template": "Maodely",
+    "personalInfo": "Fampahalalana manokana",
+    "experience": "Traikefa",
+    "education": "Fianarana",
+    "skills": "Fahaiza-manao",
+    "languages": "Fiteny",
+    "projects": "Tetikasa",
+    "achievements": "Zava-bita"
+    ,"publishMarketplace": "Hamoaka amin'ny marketplace",
+    "updateLabel": "Havaozy"
+  },
+  "job": {
+    "search": "Fikarohana asa",
+    "title": "Anaran'ny toerana",
+    "company": "Orinasa",
+    "location": "Toerana",
+    "type": "Karazana fifanarahana",
+    "description": "Famaritana",
+    "requirements": "Fepetra takiana",
+    "apply": "Hanao fangatahana",
+    "save": "Hitahiry",
+    "saved": "Voatahiry"
+  },
+  "training": {
+    "title": "Fiofanana",
+    "search": "Hikaroka fiofanana",
+    "duration": "Faharetana",
+    "level": "Ambaratonga",
+    "price": "Vidiny",
+    "enroll": "Hisoratra anarana",
+    "details": "Antsipiriany"
+  },
+  "candidates": {
+    "title": "Lisitr'ireo kandidà",
+    "search": "Hikaroka kandidà",
+    "viewProfile": "Hijery ny mombamby",
+    "contact": "Hifandray",
+      "noContactEmail": "Tsy misy mailaka hifandraisana azo ampiasaina",
+    "experience": "Traikefa",
+    "education": "Fianarana",
+    "skills": "Fahaiza-manao",
+    "marketplace": "Marketplace",
+    "savedCandidates": "Kandidà voatahiry",
+    "savedJobs": "Asa voatahiry",
+    "myCV": "Ny CV-ko",
+    "loading": "",
+    "errorLoading": "Tsy fetsy tamin'ny fakana kandidà",
+    "noResults": "Tsy misy kandidà hita",
+    "contactDetailsTitle": "Fampandrenesana mpifandray",
+    "contactEmail": "Mailaka",
+    "contactPhone": "Telefaona",
+    "contactLoading": "Miandry ny fampahalalana...",
+    "contactLoadingError": "Tsy afaka maka fampahalalana momba ny fifandraisana.",
+    "contactNoData": "Tsy misy fampahalalana momba ny fifandraisana hita.",
+    "openMail": "Hampiasa mail client",
+    "filters": "Sivana",
+    "domain": "Sehatra",
+    "allCategories": "Sokajy rehetra",
+    "searchPlaceholder": "Hikaroka amin'ny anarana, lohateny na fahaiza-manao..."
+  },
+  "analysis": {
+    "title": "Fikarohana fiofanana ho an'ny toerana iray",
+    "resultTitle": "Vokatry ny fanadihadiana",
+    "chooseCV": "Misafidiana CV",
+    "jobDescription": "Famaritana ny asa",
+    "jobDescriptionPlaceholder": "Ampidiro ny famaritana ny asa...",
+    "jobDescriptionHelp": "Arakaraka ny antsipiriany ny famaritana no hahatsara kokoa ny fanadihadiana.",
+    "analyze": "Fikarohana fiofanana",
+    "analyzing": "Mandanjalanja...",
+    "reset": "Averina",
+    "error": "Nisy tsy fetsy tamin'ny fanadihadiana",
+    "fillJobDescription": "Fenoy ny lohateny sy ny famaritana ny asa",
+    "selectFile": "Misafidiana rakitra CV",
+    "aiHelper": "Andinino ny CV-nao miaraka amin'ny AI-nay mba hahazo tolo-kevitra manokana."
+    ,
+    "chooseMethod": "Fidio ny fomba",
+    "methodMixedTitle": "Fampidirana mifangaro",
+    "methodMixedDesc": "Ampidiro amin'ny tanana ny lohateny, famaritana, andraikitra ary fahaiza-manao",
+    "clickToChoose": "Kitiho mba hisafidy na tariho ary avelao ny CV-nao",
+    "fileFormats": "PDF, DOC, DOCX, TXT, JPG, PNG • Max 10 MB",
+    "extractionInfo": "Fangalana maranitra miaraka amin'ny AI",
+    "jobDetails": "Antsipirian'ny toerana",
+    "description": "Famaritana",
+    "matchingSkills": "Fahaiza-manao mifanaraka ({count})",
+    "improvementsTitle": "Soso-kevitra fanatsarana",
+    "editCvButton": "Hanova ny CV-ko",
+    "missingSkillsTitle": "Fahaiza-manao tsy ampy ({count})",
+    "boostTitle": "Vonona hanatsara ny mombam-piaviana?",
+    "boostDesc": "Jereo ny fiofanana atolotra mba hahazoana ny fahaiza-manao tsy ampy sy hampitombo ny vintana hahazoana ity toerana ity.",
+    "boostButton": "🚀 Hanatsara ny mombam-piaviana →",
+    "fileTypeNotAccepted": "Tsy ekena ny karazana rakitra. Endrika ekena: {formats}",
+    "removeFile": "Esory ny rakitra",
+    "previewAlt": "Topi-maso ny CV",
+    "previewPdfTitle": "Topi-maso PDF CV",
+    "noPreview": "Tsy misy topi-maso ho an'ity karazana rakitra ity",
+    "fileWillBeProcessed": "Hodinihina ny rakitra mandritra ny fanadihadiana"
+  },
+  "results": {
+    "loadingResults": "Manampy ny valiny...",
+    "matchScore": "Isa mifanaraka",
+    "matchScoreDesc": "Ny CV-nao mifanaraka amin'ny",
+    "ofRequirements": "amin'ny fepetra takian'ny asa",
+    "missingSkills": "Fahaiza-manao tsy ampy",
+    "recommendations": "Fiofanana natolotra",
+    "certified": "Voamarina",
+    "free": "Maimaim-poana",
+    "viewFormations": "Hijery ny fiofanana rehetra",
+    "savePost": "Hitahiry ity toerana ity",
+    "postSaved": "Toerana voatahiry soa aman-tsara!",
+    "strengthsWeaknesses": "Tanjaka sy lafiny tokony hatsaraina"
+  },
+  "jobResearch": {
+    "title": "Fikarohana asa",
+    "location": "Toerana",
+    "locationPlaceholder": "Antananarivo",
+    "howItWorksTitle": "Ahoana no iasany",
+    "howItWorksDesc": "Mandinika ny CV-nao izahay mba hamoaka ny fahaiza-manao sy traikefa, avy eo mamorona fangatahana sy sivana kendrena hitondrana fampahalalana momba ny asa mifanaraka aminao.",
+    "includeRemote": "Ampidiro ny asa lavitra",
+    "search": "Hikaroka",
+    "searching": "Mikaroka...",
+    "resultsTitle": "Valin'ny fikarohana asa",
+    "noResultsHeader": "Tsy misy valiny hita",
+    "pleaseSearch": "Azafady, manao fikarohana aloha.",
+    "performSearchButton": "Manao fikarohana",
+    "optimizedQueryTitle": "Fangatahana Google nohatsaraina",
+    "querySuggestion": "Raha tsy mety ireo lisitra etsy ambany, andramo ny bokotra 'Hikaroka amin'ny Google' hanitarana ny valiny.",
+    "noJobsFiltered": "Tsy misy tolotra mifanaraka amin'ny sivana voafantina.",
+    "open": "Hampiasa",
+    "defaultProfileTitle": "Matihanina",
+    "yearsSingular": "taona",
+    "yearsPlural": "taona",
+    "selectFile": "Misafidiana rakitra CV",
+    "profileExtracted": "Profil nalaina",
+    "jobsFound": "Tolotra asa hita",
+    "googleQuery": "Fangatahana karohana noforonina",
+    "copyQuery": "Adikao ny fangatahana",
+    "searchOnGoogle": "Hikaroka amin'ny Google",
+    "queryCopied": "Fangatahana nadika tao amin'ny clipboard!",
+    "filters": {
+      "all": "Rehetra",
+      "remote": "Lavitra",
+      "onsite": "Eo an-toerana"
+    },
+    "remote": "Lavitra",
+    "onsite": "Eo an-toerana",
+    "applyNow": "Hanao fangatahana izao"
+  },
+  "formations": {
+    "title": "Fiofanana ho an'ity toerana ity",
+    "recommendedFormations": "Fiofanana natolotra",
+    "recommendedBySkill": "Fiofanana natolotra araka ny fahaiza-manao",
+    "missingSkills": "Fahaiza-manao tsy ampy",
+    "jobDetails": "Antsipiriany momba ny asa",
+    "alreadyOpened": "Efa nosokafana",
+    "open": "Hampiasa",
+    "postTitle": "Ny toerana tianao:",
+    "saved": "Voatahiry",
+    "profileTargeted": "Profil kendrena",
+    "missingSkillsHeader": "Fahaiza-manao tsy ampy:",
+    "noMissingSkills": "Tsy misy fahaiza-manao very hita.",
+    "saveBoxDesc": "Tehirizo ity toerana ity mba hahitana azy any amin'ny toerana manan-danja miaraka amin'ireo fiofanana mifandraika.",
+    "saveBoxButton": "Tehirizo ity Post →",
+    "certified": "Voamarina",
+    "free": "Maimaim-poana",
+    "seeMore": "Jereo bebe kokoa",
+    "duration": "Faharetana",
+    "platform": "Sehatra",
+    "viewCourse": "Hijery ny fampianarana",
+    "noFormations": "Tsy misy fiofanana",
+    "savePost": "Hitahiry ny toerana",
+    "postSaved": "Toerana voatahiry!",
+    "backToAnalysis": "Hiverina amin'ny fanadihadiana"
+  },
+  "savedPosts": {
+    "title": "Toerana manan-danja",
+    "loading": "",
+    "noSaved": "Tsy misy toerana voatahiry amin'izao fotoana izao. Mandeha any amin'ny \"Fiofanana\" ary tsindrio \"Hitahiry ny toerana\".",
+    "salary": "Karama",
+    "perMonth": "/ volana",
+    "formationsSaved": "fiofanana voatahiry",
+    "viewFormations": "Hijery ny fiofanana mifandray",
+    "salaryNA": "Karama: Tsy misy"
+  },
+  "footer": {
+    "about": "Momba",
+    "contact": "Fifandraisana",
+    "privacy": "Politikan'ny tsiambaratelo"
+  }
+}

@@ -1,0 +1,200 @@
+/* ==================== KEEPER STYLE - POSTES IMPORTANTS PAGE ==================== */
+
+.ma-main-container { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 40px 20px; 
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.ma-page1-title { 
+    font-size: 2.5rem; 
+    font-weight: 700; 
+    margin-bottom: 40px; 
+    color: var(--dark, #2c3e50);
+    text-align: center;
+}
+
+/* Job Card - Style Keeper */
+.ma-page1-job-card { 
+    background: white;
+    border-radius: var(--radius-lg, 20px); 
+    padding: 30px; 
+    margin-bottom: 20px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+    box-shadow: var(--shadow, 0 5px 15px rgba(0,0,0,0.1));
+    border: 1px solid var(--light-gray, #e9ecef);
+    transition: var(--transition, all 0.3s ease);
+}
+
+.ma-page1-job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg, 0 10px 30px rgba(0,0,0,0.15));
+}
+
+.ma-page1-job-left { 
+    display: flex; 
+    align-items: center; 
+    gap: 20px;
+    flex: 1;
+}
+
+.ma-page1-company-logo { 
+    width: 60px; 
+    height: 60px; 
+    border-radius: var(--radius-md, 12px);
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    background: var(--primary, #1a5fb4);
+    color: white; 
+    font-weight: bold; 
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.ma-page1-job-info {
+    flex: 1;
+}
+
+.ma-page1-job-info h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--dark, #2c3e50);
+    margin-bottom: 8px;
+}
+
+.ma-page1-job-info p {
+    font-size: 1rem;
+    color: var(--gray, #6c757d);
+    margin-bottom: 12px;
+}
+
+.ma-page1-job-meta { 
+    display: flex; 
+    gap: 15px; 
+    font-size: 0.9rem; 
+    color: var(--gray, #6c757d);
+    flex-wrap: wrap;
+}
+
+.ma-page1-job-meta span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.ma-page1-view-btn { 
+    background: var(--primary, #1a5fb4);
+    border: none; 
+    padding: 12px 28px; 
+    border-radius: var(--radius-full, 50px);
+    color: white;
+    font-weight: 600; 
+    cursor: pointer;
+    transition: var(--transition, all 0.3s ease);
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+.ma-page1-view-btn:hover {
+    background: var(--primary-dark, #0d4a8a);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow, 0 5px 15px rgba(0,0,0,0.1));
+}
+
+/* Badge styles */
+.job-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: var(--radius-full, 50px);
+    font-size: 0.85rem;
+    font-weight: 600;
+    background: rgba(38, 162, 105, 0.1);
+    color: var(--secondary, #26a269);
+}
+
+.job-badge.urgent {
+    background: rgba(231, 76, 60, 0.1);
+    color: #c0392b;
+}
+
+.job-badge.remote {
+    background: rgba(26, 95, 180, 0.1);
+    color: var(--primary, #1a5fb4);
+}
+
+/* Empty state */
+.ma-empty-state {
+    text-align: center;
+    padding: 80px 20px;
+    color: var(--gray, #6c757d);
+}
+
+.ma-empty-state h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--dark, #2c3e50);
+}
+
+.ma-empty-state p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .ma-main-container { 
+        padding: 30px 15px; 
+    }
+    
+    .ma-page1-title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+    
+    .ma-page1-job-card { 
+        padding: 20px; 
+        flex-direction: column; 
+        align-items: flex-start; 
+        gap: 15px; 
+    }
+    
+    .ma-page1-job-left {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .ma-page1-company-logo {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+    
+    .ma-page1-view-btn {
+        width: 100%;
+        padding: 12px 20px;
+    }
+    
+    .ma-page1-job-meta {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ma-page1-title {
+        font-size: 1.8rem;
+    }
+    
+    .ma-page1-job-card {
+        padding: 16px;
+    }
+    
+    .ma-page1-job-info h3 {
+        font-size: 1.1rem;
+    }
+}

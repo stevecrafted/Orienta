@@ -1,0 +1,314 @@
+{
+  "common": {
+    "home": "Home",
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout",
+    "about": "About",
+    "contact": "Contact",
+    "noContactEmail": "No contact email available",
+    "privacy": "Privacy Policy",
+    "loading": "",
+    "error": "Error",
+    "success": "Success",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close",
+    "back": "Back"
+  ,
+    "required": "(required)"
+  },
+  "nav": {
+    "createCV": "Create My CV",
+    "jobSearch": "Job Search",
+    "training": "Training",
+    "candidates": "Candidates",
+    "myProfile": "My Profile",
+    "savedJobs": "Saved Jobs"
+  },
+  "home": {
+    "hero": {
+      "title": "Improve your CV and get the job you want",
+      "subtitle": "Analyze your CV, discover your missing skills and aim for your dream job.",
+      "createCV": "Create My CV",
+      "searchJob": "Search for a job",
+      "searchTraining": "Search for training for a position"
+    },
+    "features": {
+      "title": "Essential Features",
+      "createCV": {
+        "title": "Create My CV",
+        "description": "Create a professional CV in minutes with modern templates.",
+        "link": "Go to creation"
+      },
+      "searchTraining": {
+        "title": "Training Search",
+        "description": "Analyze your CV against a job offer and discover missing skills.",
+        "link": "Analyze now"
+      },
+      "searchJob": {
+        "title": "Search for a job",
+        "description": "Find relevant offers and start the analysis with one click.",
+        "link": "Search for a position"
+      }
+    },
+    "recruiter": {
+      "badge": "Recruiter Area",
+      "title": "Find the perfect talents for your company",
+      "description": "Access parsed and standardized candidate profiles with fast filters and shortlist tools to help recruiters quickly identify qualified candidates.",
+      "feature1": {
+        "title": "Talent search by skills",
+        "description": "Quickly identify candidates with the specific skills you need."
+      },
+      "feature2": {
+        "title": "Parsed & standardized profiles",
+        "description": "Automatically extract and normalize candidate data for easy comparison."
+      },
+      "feature3": {
+        "title": "Fast filtering & shortlists",
+        "description": "Use filters, tags and quick previews to build a shortlist efficiently."
+      },
+      "cta": "Search for talents"
+    },
+    "howItWorks": {
+      "title": "How does it work?",
+      "step1": "Import or create your CV in minutes.",
+      "step2": "Enter the position you're targeting or paste",
+      "step3": "Receive a complete analysis and recommendations."
+    },
+    "why": {
+      "title": "Why improve your CV?",
+      "description": "90% of candidates don't get interviews simply because their CV doesn't clearly show the skills sought. With Mitady Asa, identify your weaknesses and increase your chances of getting your dream job."
+    },
+    "stats": {
+      "candidates": "Active Candidates",
+      "domains": "Expertise Domains",
+      "satisfaction": "Satisfaction Rate"
+    },
+    "cta": {
+      "title": "Ready to start your journey?",
+      "subtitle": "Join thousands of recruiters who trust Orienta",
+      "startFree": "Start for Free",
+      "login": "Login"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Login",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Login",
+      "submitting": "Logging in...",
+      "createAccount": "Create Account",
+      "invalidCredentials": "Invalid credentials"
+    },
+    "register": {
+      "title": "Create Account",
+      "name": "Name",
+      "email": "Email",
+      "lastName": "Last Name",
+      "firstName": "First Name",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "submit": "Register",
+      "submitting": "Registering...",
+      "alreadyHaveAccount": "Already have an account?",
+      "loginLink": "Login"
+    }
+  },
+  "cv": {
+    "title": "My CV",
+    "create": "Create CV",
+    "edit": "Edit CV",
+    "preview": "Preview",
+    "download": "Download",
+    "template": "Template",
+    "personalInfo": "Personal Information",
+    "experience": "Experience",
+    "education": "Education",
+    "skills": "Skills",
+    "languages": "Languages",
+    "projects": "Projects",
+    "achievements": "Achievements"
+    ,"publishMarketplace": "Publish to marketplace",
+    "updateLabel": "Update"
+  },
+  "job": {
+    "search": "Job Search",
+    "title": "Job Title",
+    "company": "Company",
+    "location": "Location",
+    "type": "Contract Type",
+    "description": "Description",
+    "requirements": "Requirements",
+    "apply": "Apply",
+    "save": "Save",
+    "saved": "Saved"
+  },
+  "training": {
+    "title": "Training",
+    "search": "Search Training",
+    "duration": "Duration",
+    "level": "Level",
+    "price": "Price",
+    "enroll": "Enroll",
+    "details": "Details"
+  },
+  "candidates": {
+    "title": "Candidate List",
+    "search": "Search Candidate",
+    "viewProfile": "View Profile",
+    "contact": "Contact",
+    "experience": "Experience",
+    "education": "Education",
+    "skills": "Skills",
+    "marketplace": "Marketplace",
+    "savedCandidates": "Saved Candidates",
+    "savedJobs": "Saved Jobs",
+    "myCV": "My CV",
+    "loading": "",
+    "errorLoading": "Error loading candidates",
+    "noResults": "No candidates found",
+    "contactDetailsTitle": "Candidate contact",
+    "contactEmail": "Email",
+    "contactPhone": "Phone",
+    "contactLoading": "Loading contact...",
+    "contactLoadingError": "Unable to load contact information.",
+    "contactNoData": "No contact data available.",
+    "openMail": "Open mail client",
+    "filters": "Filters",
+    "domain": "Domain",
+    "allCategories": "All categories",
+    "searchPlaceholder": "Search by name, title or skills..."
+  },
+  "analysis": {
+    "title": "Search for training for a position",
+    "resultTitle": "Analysis result",
+    "chooseCV": "Choose a CV",
+    "jobDescription": "Job description",
+    "jobDescriptionPlaceholder": "Enter job description...",
+    "jobDescriptionHelp": "The more detailed the job description, the more accurate the analysis.",
+    "analyze": "Search for training",
+    "analyzing": "Analyzing...",
+    "reset": "Reset",
+    "error": "An error occurred during analysis",
+    "fillJobDescription": "Please fill in the job title and description",
+    "selectFile": "Please select a CV file",
+    "aiHelper": "Analyze your CV with our AI to get personalized recommendations."
+    ,
+    "chooseMethod": "Choose method",
+    "methodMixedTitle": "Mixed input",
+    "methodMixedDesc": "Type title, description, responsibilities and skills manually",
+    "clickToChoose": "Click to choose or drag & drop your CV",
+    "fileFormats": "PDF, DOC, DOCX, TXT, JPG, PNG • Max 10 MB",
+    "extractionInfo": "Smart extraction with AI",
+    "jobDetails": "Job details",
+    "description": "Description",
+    "matchingSkills": "Matching skills ({count})",
+    "improvementsTitle": "Improvement recommendations",
+    "editCvButton": "Edit my CV",
+    "missingSkillsTitle": "Missing skills ({count})",
+    "boostTitle": "Ready to boost your profile?",
+    "boostDesc": "Discover recommended trainings to acquire the missing skills and increase your chances for this position.",
+    "boostButton": "Boost my profile →",
+    "fileTypeNotAccepted": "File type not accepted. Accepted formats: {formats}",
+    "removeFile": "Remove file",
+    "previewAlt": "CV preview",
+    "previewPdfTitle": "CV PDF preview",
+    "noPreview": "Preview not available for this file type",
+    "fileWillBeProcessed": "The file will be processed during analysis"
+  },
+  "results": {
+    "loadingResults": "Loading results...",
+    "matchScore": "Match Score",
+    "matchScoreDesc": "Your CV matches",
+    "ofRequirements": "of job requirements",
+    "missingSkills": "Missing Skills",
+    "recommendations": "Recommended Training",
+    "certified": "Certified",
+    "free": "Free",
+    "viewFormations": "View all training",
+    "savePost": "Save this position",
+    "postSaved": "Position saved successfully!",
+    "strengthsWeaknesses": "Strengths and areas for improvement"
+  },
+  "jobResearch": {
+    "title": "Job Search",
+    "location": "Location",
+    "locationPlaceholder": "Antananarivo",
+    "howItWorksTitle": "How it works",
+    "howItWorksDesc": "We analyze your CV to extract skills and experience, then build targeted job queries and filters to surface relevant job postings for you to review and shortlist.",
+    "includeRemote": "Include remote work",
+    "search": "Search",
+    "searching": "Searching...",
+    "resultsTitle": "Job search results",
+    "noResultsHeader": "No results found",
+    "pleaseSearch": "Please perform a search first.",
+    "performSearchButton": "Perform a search",
+    "optimizedQueryTitle": "Optimized Google query",
+    "querySuggestion": "If the listings below aren't helpful, try the 'Search on Google' button to broaden results.",
+    "noJobsFiltered": "No job matches the selected filters.",
+    "open": "Open",
+    "defaultProfileTitle": "Professional",
+    "yearsSingular": "year",
+    "yearsPlural": "years",
+    "selectFile": "Please select a CV file",
+    "profileExtracted": "Profile extracted",
+    "jobsFound": "Job offers found",
+    "googleQuery": "Generated search query",
+    "copyQuery": "Copy query",
+    "searchOnGoogle": "Search on Google",
+    "queryCopied": "Query copied to clipboard!",
+    "filters": {
+      "all": "All",
+      "remote": "Remote",
+      "onsite": "On-site"
+    },
+    "remote": "Remote",
+    "onsite": "On-site",
+    "applyNow": "Apply now"
+  },
+  "formations": {
+    "title": "Training for this position",
+    "recommendedFormations": "Recommended Training",
+    "recommendedBySkill": "Recommended trainings by skill",
+    "missingSkills": "Missing Skills",
+    "jobDetails": "Job Details",
+    "alreadyOpened": "Already opened",
+    "open": "Open",
+    "postTitle": "The position you want:",
+    "saved": "Saved",
+    "profileTargeted": "Targeted profile",
+    "missingSkillsHeader": "Missing skills:",
+    "noMissingSkills": "No missing skills detected.",
+    "saveBoxDesc": "Save this position to find it later among your important positions with its associated trainings.",
+    "saveBoxButton": "Save This Post →",
+    "certified": "Certified",
+    "free": "Free",
+    "seeMore": "See more",
+    "duration": "Duration",
+    "platform": "Platform",
+    "viewCourse": "View course",
+    "noFormations": "No training available",
+    "savePost": "Save position",
+    "postSaved": "Position saved!",
+    "backToAnalysis": "Back to analysis"
+  },
+  "savedPosts": {
+    "title": "Important Positions",
+    "loading": "",
+    "noSaved": "No saved positions yet. Go to \"Training\" and click \"Save position\".",
+    "salary": "Salary",
+    "perMonth": "/ month",
+    "formationsSaved": "training(s) saved",
+    "viewFormations": "View associated training",
+    "salaryNA": "Salary: N/A"
+  },
+  "footer": {
+    "about": "About",
+    "contact": "Contact",
+    "privacy": "Privacy Policy"
+  }
+}

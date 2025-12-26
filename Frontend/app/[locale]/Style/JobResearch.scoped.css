@@ -1,0 +1,232 @@
+/* ==================== KEEPER STYLE - JOB RESEARCH PAGE ==================== */
+
+.job-research-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%); 
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.card {
+    background: white;
+    border-radius: var(--radius-lg, 20px);
+    padding: 3rem;
+    box-shadow: var(--shadow, 0 5px 15px rgba(0,0,0,0.1));
+    border: 1px solid var(--light-gray, #e9ecef);
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--dark, #2c3e50);
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.subtitle {
+    color: var(--gray, #6c757d);
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.upload-section {
+    margin-bottom: 2rem;
+}
+
+.search-options {
+    background: var(--light, #f8f9fa);
+    border-radius: var(--radius-md, 12px);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border: 1px solid var(--light-gray, #e9ecef);
+}
+
+.search-options h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--dark, #2c3e50);
+    margin-bottom: 1rem;
+}
+
+.option-group {
+    margin-bottom: 1rem;
+}
+
+.option-group label {
+    display: block;
+    font-weight: 600;
+    color: var(--dark, #2c3e50);
+    margin-bottom: 0.5rem;
+}
+
+.location-input {
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid var(--light-gray, #e9ecef);
+    border-radius: var(--radius-md, 12px);
+    font-size: 1rem;
+    transition: var(--transition, all 0.3s ease);
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.location-input:focus {
+    outline: none;
+    border-color: var(--primary, #1a5fb4);
+    box-shadow: 0 0 0 3px rgba(26, 95, 180, 0.1);
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 400 !important;
+    padding: 12px;
+    border-radius: var(--radius-sm, 8px);
+    transition: var(--transition, all 0.3s ease);
+}
+
+.checkbox-label:hover {
+    background-color: rgba(26, 95, 180, 0.05);
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.75rem;
+    cursor: pointer;
+    accent-color: var(--primary, #1a5fb4);
+}
+
+.checkbox-label span {
+    color: var(--gray, #6c757d);
+}
+
+.error-message {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: rgba(231, 76, 60, 0.1);
+    border: 1px solid #e74c3c;
+    border-radius: var(--radius-md, 12px);
+    color: #c0392b;
+    margin-bottom: 1.5rem;
+}
+
+.error-message svg {
+    flex-shrink: 0;
+}
+
+.submit-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 14px 32px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    background: var(--primary, #1a5fb4);
+    border: none;
+    border-radius: var(--radius-full, 50px);
+    cursor: pointer;
+    transition: var(--transition, all 0.3s ease);
+    box-shadow: var(--shadow, 0 5px 15px rgba(0,0,0,0.1));
+}
+
+.submit-button:hover:not(:disabled) {
+    background-color: var(--primary-dark, #0d4a8a);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md, 0 8px 20px rgba(0,0,0,0.12));
+}
+
+.submit-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.submit-button .spinner {
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.info-box {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: rgba(38, 162, 105, 0.1);
+    border-left: 4px solid var(--secondary, #26a269);
+    border-radius: var(--radius-md, 12px);
+    margin-top: 2rem;
+}
+
+.info-box svg {
+    flex-shrink: 0;
+    color: var(--secondary, #26a269);
+}
+
+.info-box strong {
+    display: block;
+    color: var(--dark, #2c3e50);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.info-box p {
+    color: var(--gray, #6c757d);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .card {
+        padding: 2rem 1.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .search-options {
+        padding: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1rem 0.5rem;
+    }
+    
+    .card {
+        padding: 1.5rem 1rem;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .submit-button {
+        padding: 12px 24px;
+        font-size: 0.95rem;
+    }
+}
