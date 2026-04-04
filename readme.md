@@ -1,5 +1,7 @@
 # Orienta
 
+YT demo link : https://youtu.be/VoWvZTIpxVc
+
 ## Project Overview
 Orienta is a platform designed to **facilitate job and training search** for people seeking new professional opportunities.  
 The platform also enables structured management and sharing of candidate profiles, optimized for recruiters.
